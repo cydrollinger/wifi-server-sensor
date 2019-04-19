@@ -1,0 +1,282 @@
+// 18F
+//Serial pin connections:
+//http://www.twyman.org.uk/FAQ/PIC-PC-Problem1.htm
+//Tx = RB7
+//Rx = RB5
+//9600 baud
+//6MHz crystal
+//no parity
+//8 bit
+//minicom -s (<- setup minicom first time, after that, just minicom)
+//serial port: /dev/term/ttyS0
+//RB7 to pin 11 MAX232N
+//RB5 to pin 12 MAX232N
+//MAX232N pin 13 to serial pin 3
+//MAX232N pin 14 to serial pin 2
+//http://focus.ti.com/lit/ds/symlink/max232.pdf
+//http://www.electro-tech-online.com/attachments/micro-controllers/40221d1268700585-rs232-max232-communication-pic16f876a-problem-usart-.jpg
+
+unsigned char strIn[100];
+         
+void setupUART(void){
+    //RB5 and RB7 TRISB set to 1 (per ref manual p180)
+    TRISBbits.TRISB5 = 1;
+    TRISBbits.TRISB7 = 1;
+
+    //RB5 digital input
+    ANSELHbits.ANS11 = 0;
+
+    //Comparator off
+    CCP1CONbits.CCP1M0 = 0;
+    CCP1CONbits.CCP1M1 = 0;
+    CCP1CONbits.CCP1M2 = 0;
+    CCP1CONbits.CCP1M3 = 0;
+    CM1CON0bits.C1ON = 0;
+    CM2CON0bits.C2ON = 0;  
+
+    //Low speed, 6MHz, 2400 baud
+    TXSTAbits.BRGH = 0;
+    BAUDCONbits.BRG16 = 0;
+    SPBRG = 38;
+
+    //Asynchronous serial communication
+    TXSTAbits.SYNC = 0;
+
+    //Serial port enabled
+    RCSTAbits.SPEN = 1;
+
+    //Disable Tx/Rx interrupts
+    PIE1bits.TXIE = 0;
+    PIE1bits.RCIE = 0;
+
+    //8-bit words (not 9-bit)
+    TXSTAbits.TX9 = 0;
+    RCSTAbits.RX9 = 0;
+
+    //Enable transmissions
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.CREN = 1;
+}
+
+void print8bitVal(unsigned char val){
+    /*
+    ** Prints the unsigned decimal representation of an 8 bit value.
+    ** Good for printing register values to the screen.
+    **
+    ** Usage:
+    **        unsigned char foo = 23;
+    **        print8bitVal(foo);
+    **
+    ** Output (to terminal window): 23
+    */
+
+    unsigned char hundreds;
+    unsigned char tens;
+    unsigned char ones;
+    unsigned char valtmp;
+    unsigned char allZero = 1;
+
+    valtmp = val;
+
+    // Max 8-bit value is 255
+    hundreds = valtmp/100;
+    valtmp -= hundreds*100;
+    tens = valtmp/10;
+    valtmp -= tens*10;
+    ones = valtmp;
+
+    if ( hundreds > 0 ){
+        allZero = 0;
+        TXREG = hundreds + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( tens > 0 || !allZero){
+        allZero = 0;
+        TXREG = tens + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( ones > 0 || !allZero){
+        allZero = 0;
+        TXREG = ones + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+
+    if ( allZero ){
+        TXREG = 0 + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+
+    //carriage return
+    TXREG = 13;
+    while(TXSTAbits.TRMT==0){};
+    //line feed
+    TXREG = 10;
+    while(TXSTAbits.TRMT==0){};
+}
+
+void print16bitVal(unsigned short val){
+    /*
+    ** Prints the unsigned decimal representation of a 16-bit value.
+    **
+    ** Usage:
+    **        unsigned short foo = 4321;
+    **        print16bitVal(foo);
+    **
+    ** Output (to terminal window): 4321
+    */
+
+    unsigned short tenthous;
+    unsigned short thous;
+    unsigned short hundreds;
+    unsigned short tens;
+    unsigned short ones;
+    unsigned short valtmp;
+    unsigned char allZero = 1;
+
+    valtmp = val;
+
+    // Max 16-bit value is 65535
+
+    tenthous = valtmp/10000;
+    valtmp -= tenthous*10000;
+    thous = valtmp/1000;
+    valtmp -= thous*1000;
+    hundreds = valtmp/100;
+    valtmp -= hundreds*100;
+    tens = valtmp/10;
+    valtmp -= tens*10;
+    ones = valtmp;
+
+    if ( tenthous > 0 ){
+        allZero = 0;
+        TXREG = tenthous + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( thous > 0 || !allZero){
+        allZero = 0;
+        TXREG = thous + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( hundreds > 0 || !allZero){
+        allZero = 0;
+        TXREG = hundreds + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( tens > 0 || !allZero){
+        allZero = 0;
+        TXREG = tens + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+    if ( ones > 0 || !allZero){
+        allZero = 0;
+        TXREG = ones + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+
+    if ( allZero ){
+        TXREG = 0 + 48;
+        while(TXSTAbits.TRMT==0){};
+    }
+
+    //carriage return
+    TXREG = 13;
+    while(TXSTAbits.TRMT==0){};
+    //line feed
+    TXREG = 10;
+    while(TXSTAbits.TRMT==0){};
+}
+
+void printASCII(unsigned char asciiVal){
+    /*
+    ** Prints a single ASCII character, given its 8bit numeric value.
+    **
+    ** Usage:
+    **        unsigned char foo = 41;
+    **        printASCII(foo);
+    **
+    ** Output (to terminal window): A
+    */
+
+    TXREG = asciiVal;
+    while(TXSTAbits.TRMT==0){};
+    //carriage return
+    TXREG = 13;
+    while(TXSTAbits.TRMT==0){};
+    //line feed
+    TXREG = 10;
+    while(TXSTAbits.TRMT==0){};
+}
+
+void printString(unsigned char str[]){
+    /*
+    ** Prints a string.
+    **
+    ** Usage:
+    **        printString("Hello World");
+    **
+    ** Output (to terminal window): Hello World
+    */
+
+    int strlength;
+    int a;
+    unsigned char foundIt = 0;
+
+    // Find the null terminator
+    strlength = 0;
+    while(!foundIt){
+        if ( str[strlength] > 0){
+            strlength++;
+        }else{
+            foundIt = 1;
+        }
+    }
+
+    for(a=0;a<=strlength-1;a++){
+        TXREG = str[a];
+        while(TXSTAbits.TRMT==0){};
+    }
+    //carriage return
+    TXREG = 13;
+    while(TXSTAbits.TRMT==0){};
+    //line feed
+    TXREG = 10;
+    while(TXSTAbits.TRMT==0){};
+}
+
+void getString(void){
+    /*
+    ** Retrieves a string from the terminal window. Characters
+    ** are collected until the user hits the enter key. The
+    ** string is recorded in a global variable called strIn.
+    ** Limited to 100 characters.
+    ** 
+    ** Usage:
+    **        getString();
+    */
+
+    int a, i;
+
+    for(a=0;a<=(100-1);a++){
+        strIn[a] = 0;
+    }
+
+    i = 0;
+    while( i <= (100-1) ){
+        while(PIR1bits.RCIF==0){};
+        strIn[i] = RCREG;
+        if ( strIn[i] == 13 ){
+            strIn[i+1] = 0;  //insert null terminator
+            break;
+        }
+        i++;
+    };
+
+    // If strIn is overrun, manually insert a carriage
+    // return and null terminator.
+    if ( i == 100 ){
+        strIn[100-2] = 13;
+        strIn[100-1] = 0;
+    }
+        
+}
+

@@ -1,0 +1,496 @@
+typedef struct BDn {
+    unsigned char STAT;
+    unsigned char CNT;
+    unsigned char ADRL;
+    unsigned char ADRH;
+} BDn_type;
+struct BDn __at (0x0200) BD0_OUT;
+struct BDn __at (0x0204) BD0_IN;
+struct BDn __at (0x0208) BD1_OUT;
+
+typedef struct setupPkg {
+    unsigned char bmRequestType;
+    unsigned char bRequest;
+    unsigned char wValueL;
+    unsigned char wValueH;
+    unsigned char wIndexL;
+    unsigned char wIndexH;
+    unsigned char wLengthL;
+    unsigned char wLengthH;
+} setupPkg_type;
+struct setupPkg __at (0x228) hostSetupPkg; 
+
+/*********************/
+/* Device Descriptor */
+/*********************/
+typedef struct deviceDescriptor {
+    unsigned char  bLength;            //size of descriptor in bytes         
+    unsigned char  bDescriptorType;    //device descriptor code
+    unsigned short bcdUSB;             //USB 2.0
+    unsigned char  bDeviceClass;       //class code 
+    unsigned char  bDeviceSubClass;    //sub-class code 
+    unsigned char  bDeviceProtocol;    //protocol code 
+    unsigned char  bMaxPacketSize;     //Max packet size 
+    unsigned short idVendor;           //Vendor ID (lsb) 
+    unsigned short idProduct;          //Product ID (lsb) 
+    unsigned short bcdDevice;          //release ID (lsb) 
+    unsigned char  iManufacturer;      //Vendor string descriptors
+    unsigned char  iProduct;           //Product string descriptors
+    unsigned char  iSerialNumber;      //Serial string descriptors
+    unsigned char  bNumConfigurations; //num configurations
+} deviceDescriptor_type;
+struct deviceDescriptor __at (0x230) devDescr;
+
+/****************************/
+/* Configuration Descriptor */
+/****************************/
+typedef struct configurationDescriptor {
+    unsigned char  bLength;             // size of descriptor in bytes          
+    unsigned char  bDescriptorType;     // config descriptor code
+    unsigned short wTotalLength;        // config+interface+endpoint descriptors
+    unsigned char  bNumInterfaces;      // Number of interfaces
+    unsigned char  bConfigurationValue; // Value to select this interface
+    unsigned char  iConfiguration;      // Index of string descriptor
+    unsigned char  bmAttributes;        // Powered (self or hub)
+    unsigned char  bMaxPower;           // Power usage
+} configurationDescriptor_type;
+struct configurationDescriptor __at (0x242) configDescr;
+
+/************************/
+/* Interface Descriptor */
+/************************/
+typedef struct interfaceDescriptor {
+    unsigned char bLength;            // size of descriptor in bytes
+    unsigned char bDescriptorType;    // interface descriptor code
+    unsigned char bInterfaceNumber;   // Number of interfaces
+    unsigned char bAlternateSetting;  // Value to select alt interface
+    unsigned char bNumEndpoints;      // Num endpoints used
+    unsigned char bInterfaceClass;    // Class code
+    unsigned char bInterfaceSubClass; // Subclass code
+    unsigned char bInterfaceProtocol; // Protocol code
+    unsigned char iInterface;         // Index of String Descriptor
+} interfaceDescriptor_type;
+struct interfaceDescriptor __at (0x24B) interfDescr;
+
+/***********************/
+/* Endpoint Descriptor */
+/***********************/
+typedef struct endpointDescriptor {
+    unsigned char  bLength;          // size of descriptor in bytes 
+    unsigned char  bDescriptorType;  // endpoint descriptor type
+    unsigned char  bEndpointAddress; // endpoint bitmap
+    unsigned char  bmAttributes;     // attributes bitmap
+    unsigned short wMaxPacketSize;   // max packet size
+    unsigned char  bInterval;        // polling interval (ignored for control) 
+} endpointDescriptor_type;          
+struct endpointDescriptor __at (0x254) endpoint1DescrOUT;
+
+/**********************/
+/* String Descriptor0 */
+/**********************/
+typedef struct stringDescriptor0 {
+    unsigned char  bLength;
+    unsigned char  bDescriptorType;
+    unsigned short wLANGID;        
+} stringDescriptor0_type;
+struct stringDescriptor0 __at (0x0270) stringDescr0;
+
+/**********************/
+/* String Descriptors */
+/**********************/
+typedef struct stringDescriptorN {
+    unsigned char  bLength;
+    unsigned char  bDescriptorType;
+    unsigned short str[10];
+} stringDescriptorN_type;
+struct stringDescriptorN __at (0x0274) stringDescr1;
+struct stringDescriptorN __at (0x028A) stringDescr2;
+
+/*************************/
+/* Generic 8 byte packet */
+/*************************/
+typedef struct pkg {
+    unsigned char BYTE0;
+    unsigned char BYTE1;
+    unsigned char BYTE2;
+    unsigned char BYTE3;
+    unsigned char BYTE4;
+    unsigned char BYTE5;
+    unsigned char BYTE6;
+    unsigned char BYTE7;
+} pkg_type;
+struct pkg __at (0x2A0) outPkgEp1 = {0,0,0,0,0,0,0,0};
+
+/***********/
+/* Globals */
+/***********/
+unsigned char UOWN  = 0x80;
+unsigned char DTS   = 0x40;
+unsigned char DTSEN = 0x08;
+unsigned char OUT_TOKEN   = 0x01;
+unsigned char SETUP_TOKEN = 0x0D;
+unsigned char IN_TOKEN    = 0x09;
+unsigned char descriptorType_device = 0x01;
+unsigned char descriptorType_config = 0x02;
+unsigned char descriptorType_string = 0x03;
+
+void initDescriptors(void){
+
+    /*
+    ** This function populates the values in the
+    ** descriptors. These will always be hard-coded
+    ** for a specific device. Any configuration change
+    ** (i.e., changing or adding an endpoint) will
+    ** require updates to the values below.
+    */
+
+    devDescr.bLength            = 0x12;
+    devDescr.bDescriptorType    = 0x01;
+    devDescr.bcdUSB             = 0x0200; //USB version number (2.0)
+    devDescr.bDeviceClass       = 0x00;
+    devDescr.bDeviceSubClass    = 0x00;
+    devDescr.bDeviceProtocol    = 0x00;
+    devDescr.bMaxPacketSize     = 0x08;
+    devDescr.idVendor           = 0x1234; //Made up vendor ID
+    devDescr.idProduct          = 0x4321; //Made up produce ID
+    devDescr.bcdDevice          = 0x0001;
+    devDescr.iManufacturer      = 0x01;   // String descriptors
+    devDescr.iProduct           = 0x02;
+    devDescr.iSerialNumber      = 0x00;
+    devDescr.bNumConfigurations = 0x01;
+
+    configDescr.bLength              = 0x09;
+    configDescr.bDescriptorType      = 0x02;
+    configDescr.wTotalLength         = 0x0019; //length of config, interface, and endpoint descriptors
+    configDescr.bNumInterfaces       = 0x01;
+    configDescr.bConfigurationValue  = 0x01;
+    configDescr.iConfiguration       = 0x00;
+    configDescr.bmAttributes         = 0xC0; //Self powered
+    configDescr.bMaxPower            = 0x32;
+                                     
+    interfDescr.bLength            = 0x09;   
+    interfDescr.bDescriptorType    = 0x04;
+    interfDescr.bInterfaceNumber   = 0x00; //0th interface
+    interfDescr.bAlternateSetting  = 0x00;
+    interfDescr.bNumEndpoints      = 0x01;
+    interfDescr.bInterfaceClass    = 0xFF; //Vendor specific
+    interfDescr.bInterfaceSubClass = 0xFF; //Vendor specific
+    interfDescr.bInterfaceProtocol = 0xFF; //Vendor specific
+    interfDescr.iInterface         = 0x00;
+
+    endpoint1DescrOUT.bLength          = 0x07; 
+    endpoint1DescrOUT.bDescriptorType  = 0x05;
+    endpoint1DescrOUT.bEndpointAddress = 0x01;   //Endpoint 1, OUT direction
+    endpoint1DescrOUT.bmAttributes     = 0x03;   //Interrupt style
+    endpoint1DescrOUT.wMaxPacketSize   = 0x0008;
+    endpoint1DescrOUT.bInterval        = 0x01;   //Poll every 1 frame count
+
+    stringDescr0.bLength         = 0x04;
+    stringDescr0.bDescriptorType = 0x03;
+    stringDescr0.wLANGID         = 0x0409; //English Language ID
+
+    stringDescr1.bLength          = 0x0E;
+    stringDescr1.bDescriptorType  = 0x03;
+    stringDescr1.str[0]           = 0x004D; //M
+    stringDescr1.str[1]           = 0x0059; //Y
+    stringDescr1.str[2]           = 0x0020; // 
+    stringDescr1.str[3]           = 0x0050; //P
+    stringDescr1.str[4]           = 0x0052; //R
+    stringDescr1.str[5]           = 0x004F; //O
+    stringDescr1.str[6]           = 0x0044; //D
+
+    stringDescr2.bLength          = 0x0E;
+    stringDescr2.bDescriptorType  = 0x03;
+    stringDescr2.str[0]           = 0x004D; //M
+    stringDescr2.str[1]           = 0x0059; //Y
+    stringDescr2.str[2]           = 0x0020; //
+    stringDescr2.str[3]           = 0x0056; //V
+    stringDescr2.str[4]           = 0x0045; //E
+    stringDescr2.str[5]           = 0x004E; //N
+    stringDescr2.str[6]           = 0x0044; //D
+}
+
+void printError(unsigned char errNum){
+    printString("Error:"); 
+    print8bitVal(errNum);
+    while(1){}
+}
+
+void sendDeviceDescriptor(void){
+    unsigned char pid;
+
+    /*
+    ** IN direction transactions always begin with DTS set.
+    ** The Device Descriptor is 18 bytes long, but the max
+    ** number of bytes on a low-speed device is 8 bytes.
+    ** Therefore, the 18 bytes are split into three chunks
+    ** of 8 bytes, 8 bytes, and 2 bytes. The host understands
+    ** this and will reassemble the three chunks into a whole
+    ** on the other end.
+    **
+    ** Since this will be an IN transaction, the BD0_IN.CNT
+    ** register now specifies the exact number of bytes to send
+    ** to the host.  Notice the 3rd transaction below only
+    ** sends 2 bytes to complete the device descriptor. Also
+    ** notice the address values are incremented to grab the
+    ** right chunk of bytes for each transaction. This
+    ** particular data is defined above as devDescr at 0x230.
+    */
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02; //address of devDescr
+    BD0_IN.ADRL = 0x30;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(43);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x38;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(44);
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 2;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x40;
+    BD0_IN.STAT = UOWN | DTS | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(45);
+
+    /*
+    ** After every SETUP communication, a Status transaction
+    ** must be sent. The Status transaction is always in the
+    ** opposite direction of the request and contains 0 bytes.
+    ** Since in this case the host requested data, which was 
+    ** sent in the IN direction, the Status transaction will
+    ** be in the OUT direction. The DTS bit is ALWAYS set for
+    ** Status transactions.
+    */
+
+    /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(46);
+    UIRbits.TRNIF = 0;
+    pid = (BD0_OUT.STAT & 0x3C) >> 2;
+}
+
+void sendConfigDescriptor(void){
+    unsigned char pid;
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;  //address of configDescr
+    BD0_IN.ADRL = 0x42;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(47);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 1;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x4A;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(48);
+
+    /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(49);
+    UIRbits.TRNIF = 0;
+}
+
+void sendConfigDescriptorAndOthers(void){
+    unsigned char pid;
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;  // address of configDescr
+    BD0_IN.ADRL = 0x42;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(50);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x4A;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(51);
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x52;
+    BD0_IN.STAT = UOWN | DTS | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(52);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 1;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x5A;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(53);
+
+    /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(54);
+    UIRbits.TRNIF = 0;
+}
+
+void sendStringDescriptor0(void){
+    unsigned char pid;
+
+    /*
+    ** This just sets the language ID = 0x0409.
+    */
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 4;
+    BD0_IN.ADRH = 0x02;  //address of stringDescr0
+    BD0_IN.ADRL = 0x70;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(55);
+
+   /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(56);
+    UIRbits.TRNIF = 0;
+}
+
+void sendStringDescriptor1(void){
+    unsigned char pid;
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;  //address of stringDescr1
+    BD0_IN.ADRL = 0x74;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(57);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 6;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x7C;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(58);
+
+    /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(59);
+    UIRbits.TRNIF = 0;
+}
+
+void sendStringDescriptor2(void){
+    unsigned char pid;
+
+    /*******************/
+    /* IN Token DATA 1 */
+    /*******************/
+    BD0_IN.CNT  = 8;
+    BD0_IN.ADRH = 0x02;  //address of stringDescr2
+    BD0_IN.ADRL = 0x8A;
+    BD0_IN.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(60);
+
+    /*******************/
+    /* IN Token DATA 0 */
+    /*******************/
+    BD0_IN.CNT  = 6;
+    BD0_IN.ADRH = 0x02;
+    BD0_IN.ADRL = 0x92;
+    BD0_IN.STAT = UOWN | DTSEN; 
+    while(!UIRbits.TRNIF){}
+    UIRbits.TRNIF = 0;
+    pid = (BD0_IN.STAT & 0x3C) >> 2;
+    if (pid!=IN_TOKEN)printError(61);
+
+    /*********************/
+    /* Status OUT DATA 1 */
+    /*********************/
+    BD0_OUT.CNT = 0;
+    BD0_OUT.STAT = UOWN | DTS | DTSEN;
+    while(!UIRbits.TRNIF){}
+    if (USTATbits.DIR!=0)printError(62);
+    UIRbits.TRNIF = 0;
+}

@@ -1,0 +1,12 @@
+LockieFreezer
+Version=3
+C:\microchip\mla\v2014_07_22\apps\tcpip\wifi_g_demo_17_09_2015\firmware\src\wifi_g_demo_webpages
+http://
+
+
+7/20/2015 9:23:59 AM
+NO
+NO
+YES
+YES
+*.html;*.htm;*.vtm;*.vtml;*.asp;*.css;*.shtml;*.phtml;*.php;*.php3;*.xml;*.xsl;*.cfm;*.cfml;*.txt;*.pl;*.cgi;*.snp;*.js;*.vb;*.vbs;*.bas*.mid;*.wav;*.au;*.ra;*.ram;*.bmp;*.gif;*.jpg;*.jpeg;*.png;*.exe;

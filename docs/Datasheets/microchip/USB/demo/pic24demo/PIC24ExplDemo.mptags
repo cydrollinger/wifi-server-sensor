@@ -1,0 +1,585 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+AD1PCFG::AD1PCFGL	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	74;"	d	line:74
+AD1PCFGbits::AD1PCFGLbits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	73;"	d	line:73
+ADCInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	101;"	f	line:101
+ADCInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	61;"	p	line:61	signature:()
+ADCIsFromMemory	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	332;"	f	line:332
+ADCIsFromMemory	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	120;"	p	line:120	signature:()
+ADCLoadTemperature	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	290;"	f	line:290
+ADCLoadTemperature	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	135;"	p	line:135	signature:()
+ADCProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	133;"	f	line:133
+ADCProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	77;"	p	line:77	signature:()
+ADCSetFromMemory	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	316;"	f	line:316
+ADCSetFromMemory	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	106;"	p	line:106	signature:()
+ADCShortToString	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	223;"	f	line:223	signature:(int Value, char DotPos, char* Buffer)
+ADCShortToString	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	153;"	p	line:153	signature:(int Value, char DotPos, char* Buffer)
+ADCStoreTemperature	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	267;"	f	line:267
+ADCStoreTemperature	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	91;"	p	line:91	signature:()
+ADC_CELSIUS_DELAY::100	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	55;"	d	line:55	file:
+ADC_POS_MEM::13	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	64;"	d	line:64	file:
+ADC_POS_NUMBER::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	58;"	d	line:58	file:
+ADC_POS_SCALE::11	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	61;"	d	line:61	file:
+ADC_SWITCH_DELAY::600	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	52;"	d	line:52	file:
+ADC_TEMPERATURE::ADC_TEMP_CHAN	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	48;"	d	line:48	file:
+ADC_TEMP_CHAN::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	115;"	d	line:115
+ADC_TEMP_CHAN::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	58;"	d	line:58
+ADC_TEMP_CHAN::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	42;"	d	line:42
+ADC_VOLTAGE::ADC_VOLT_CHAN	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	49;"	d	line:49	file:
+ADC_VOLT_CHAN::5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	112;"	d	line:112
+ADC_VOLT_CHAN::5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	56;"	d	line:56
+ADC_VOLT_CHAN::7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	39;"	d	line:39
+AN_TEMP_PIN::AD1PCFGbits.PCFG4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	114;"	d	line:114
+AN_TEMP_PIN::AD1PCFGbits.PCFG4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	57;"	d	line:57
+AN_TEMP_PIN::AD1PCFGbits.PCFG6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	41;"	d	line:41
+AN_VOLT_PIN::AD1PCFGbits.PCFG5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	111;"	d	line:111
+AN_VOLT_PIN::AD1PCFGbits.PCFG5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	55;"	d	line:55
+AN_VOLT_PIN::AD1PCFGbits.PCFG7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	38;"	d	line:38
+AVCC::3300	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	67;"	d	line:67	file:
+BAUDRATE2::19200	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	49;"	d	line:49
+BAUDRATEREG2::SYSCLK/32/BAUDRATE2-1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	46;"	d	line:46	file:
+BAUDRATE_MISTAKE::1000*(BAUDRATE2-SYSCLK/32/(BAU	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	53;"	d	line:53	file:
+BNR_CHANGE_DELAY::2000	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	229;"	d	line:229	file:
+BNR_COUNT::((sizeof(_pBannersArray)/sizeo	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	231;"	d	line:231	file:
+BOARD_VERSION4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	47;"	d	line:47
+BP0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	93;"	m	line:93	struct:STATREG
+BP1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	94;"	m	line:94	struct:STATREG
+BUTTON	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	122;"	t	line:122
+BUTTON1::BUTTON1_IO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	48;"	d	line:48
+BUTTON1::PORTAbits.RA2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	59;"	d	line:59
+BUTTON1::PORTBbits.RB0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	75;"	d	line:75
+BUTTON1::PORTDbits.RD6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	66;"	d	line:66
+BUTTON1_IO::PORTAbits.RA10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	45;"	d	line:45
+BUTTON1_IO::PORTDbits.RD6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	119;"	d	line:119
+BUTTON1_TRIS::TRISAbits.TRISA10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	50;"	d	line:50
+BUTTON1_TRIS::TRISDbits.TRISD6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	124;"	d	line:124
+BUTTON2::BUTTON2_IO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	49;"	d	line:49
+BUTTON2::PORTAbits.RA3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	60;"	d	line:60
+BUTTON2::PORTBbits.RB1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	76;"	d	line:76
+BUTTON2::PORTDbits.RD7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	67;"	d	line:67
+BUTTON2_IO::PORTAbits.RA9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	46;"	d	line:46
+BUTTON2_IO::PORTDbits.RD7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	120;"	d	line:120
+BUTTON2_TRIS::TRISAbits.TRISA9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	51;"	d	line:51
+BUTTON2_TRIS::TRISDbits.TRISD7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	125;"	d	line:125
+BUTTON3::BUTTON3_IO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	50;"	d	line:50
+BUTTON3::PORTAbits.RA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	61;"	d	line:61
+BUTTON3::PORTAbits.RA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	68;"	d	line:68
+BUTTON3::PORTBbits.RB2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	77;"	d	line:77
+BUTTON3_IO::PORTAbits.RA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	121;"	d	line:121
+BUTTON3_IO::PORTCbits.RC6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	47;"	d	line:47
+BUTTON3_TRIS::TRISAbits.TRISA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	126;"	d	line:126
+BUTTON3_TRIS::TRISCbits.TRISC6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	52;"	d	line:52
+BUTTON4::BUTTON4_IO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	51;"	d	line:51
+BUTTON4::PORTBbits.RB3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	78;"	d	line:78
+BUTTON4::PORTDbits.RD13	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	62;"	d	line:62
+BUTTON4::PORTDbits.RD13	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	69;"	d	line:69
+BUTTON4_IO::PORTAbits.RA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	48;"	d	line:48
+BUTTON4_IO::PORTDbits.RD13	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	122;"	d	line:122
+BUTTON4_TRIS::TRISAbits.TRISA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	53;"	d	line:53
+BUTTON4_TRIS::TRISDbits.TRISD13	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	127;"	d	line:127
+BUTTON_MAX_DEBOUCE::20	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	129;"	d	line:129
+BannerInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	271;"	f	line:271	signature:(void)
+BannerProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	290;"	f	line:290	signature:(void)
+BannerStart	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	253;"	f	line:253	signature:(void)
+Bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	100;"	m	line:100	union:_EEPROMStatus_
+BtnInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	73;"	f	line:73	signature:(void)
+BtnInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	95;"	p	line:95	signature:(void)
+BtnIsNotPressed::(__btn)!_button_press.b##__btn	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	161;"	d	line:161
+BtnIsPressed::(__btn)_button_press.b##__btn	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	147;"	d	line:147
+BtnProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	93;"	f	line:93	signature:(void)
+BtnProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	109;"	p	line:109	signature:(void)
+C1OUT_IO::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	169;"	d	line:169
+C1OUT_IO::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	90;"	d	line:90
+C2OUT_IO::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	170;"	d	line:170
+C2OUT_IO::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	91;"	d	line:91
+Char	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	101;"	m	line:101	union:_EEPROMStatus_
+DISP_CLOCK::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	63;"	d	line:63	file:
+DISP_HELLO::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	62;"	d	line:62	file:
+DISP_MAX::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	61;"	d	line:61	file:
+DISP_VOLTAGE::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	64;"	d	line:64	file:
+DOTPOS_NONE::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	151;"	d	line:151
+DOTPOS_TRAIL_ZEROS::-1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.h	152;"	d	line:152
+Day	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	472;"	l	line:472
+Daymax	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	517;"	l	line:517
+EECON2::NVMKEY	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	42;"	d	line:42
+EEPROMInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	48;"	f	line:48
+EEPROMInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	175;"	p	line:175	signature:()
+EEPROMReadByte	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	109;"	f	line:109	signature:(unsigned Address)
+EEPROMReadByte	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	217;"	p	line:217	signature:(unsigned Address)
+EEPROMReadStatus	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	166;"	f	line:166
+EEPROMReadStatus	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	189;"	p	line:189	signature:()
+EEPROMWriteByte	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	70;"	f	line:70	signature:(unsigned Data, unsigned Address)
+EEPROMWriteByte	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	203;"	p	line:203	signature:(unsigned Data, unsigned Address)
+EEPROMWriteEnable	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	146;"	f	line:146
+EEPROMWriteEnable	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	232;"	p	line:232	signature:()
+EEPROM_CMD_RDSR::(unsigned)0b00000101	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	47;"	d	line:47
+EEPROM_CMD_READ::(unsigned)0b00000011	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	43;"	d	line:43
+EEPROM_CMD_WRDI::(unsigned)0b00000100	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	45;"	d	line:45
+EEPROM_CMD_WREN::(unsigned)0b00000110	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	46;"	d	line:46
+EEPROM_CMD_WRITE::(unsigned)0b00000010	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	44;"	d	line:44
+EEPROM_CMD_WRSR::(unsigned)0b00000001	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	48;"	d	line:48
+EEPROM_PAGE_MASK::(unsigned)0x003f	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	42;"	d	line:42
+EEPROM_PAGE_SIZE::(unsigned)64	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	41;"	d	line:41
+EEPROM_SCK_TRIS::PPS_SPI_SCK_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	60;"	d	line:60
+EEPROM_SCK_TRIS::TRISFbits.TRISF6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	70;"	d	line:70
+EEPROM_SCK_TRIS::TRISGbits.TRISG6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	78;"	d	line:78
+EEPROM_SDI_TRIS::PPS_SPI_SDI_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	62;"	d	line:62
+EEPROM_SDI_TRIS::TRISFbits.TRISF7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	72;"	d	line:72
+EEPROM_SDI_TRIS::TRISGbits.TRISG7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	80;"	d	line:80
+EEPROM_SDO_TRIS::PPS_SPI_SDO_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	61;"	d	line:61
+EEPROM_SDO_TRIS::TRISFbits.TRISF5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	71;"	d	line:71
+EEPROM_SDO_TRIS::TRISGbits.TRISG8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	79;"	d	line:79
+EEPROM_SS_PORT::PORTDbits.RD12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	77;"	d	line:77
+EEPROM_SS_PORT::PORTDbits.RD15	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	69;"	d	line:69
+EEPROM_SS_PORT::PPS_SPI_SS_IO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	59;"	d	line:59
+EEPROM_SS_TRIS::PPS_SPI_SS_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	58;"	d	line:58
+EEPROM_SS_TRIS::TRISDbits.TRISD12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	76;"	d	line:76
+EEPROM_SS_TRIS::TRISDbits.TRISD15	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	68;"	d	line:68
+Hi	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	272;"	p	line:272	file:
+Hi	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	117;"	p	line:117	file:
+Hi	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	79;"	p	line:79	file:
+Hi::(X)(unsignedchar)((X>>8)&0x00f	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	130;"	d	line:130
+IOMAPPING_H	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	30;"	d	line:30
+IO_MAPPING_REQUIRED	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.c	43;"	d	line:43	file:
+LCDProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	81;"	f	line:81	signature:(void)
+LCDProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	66;"	p	line:66	signature:(void)
+LCD_DISPLAY_LEN::16	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	46;"	d	line:46
+LCD_F_INSTR::10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	49;"	d	line:49	file:
+LCD_STARTUP::2000	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	57;"	d	line:57	file:
+LCD_S_INSTR::150	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	53;"	d	line:53	file:
+LED0_IO::LATAbits.LATA0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	131;"	d	line:131
+LED0_IO::LATAbits.LATA10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	57;"	d	line:57
+LED0_TRIS::TRISAbits.TRISA0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	140;"	d	line:140
+LED0_TRIS::TRISAbits.TRISA10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	66;"	d	line:66
+LED1_IO::LATAbits.LATA1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	132;"	d	line:132
+LED1_IO::LATAbits.LATA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	58;"	d	line:58
+LED1_TRIS::TRISAbits.TRISA1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	141;"	d	line:141
+LED1_TRIS::TRISAbits.TRISA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	67;"	d	line:67
+LED2_IO::LATAbits.LATA2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	133;"	d	line:133
+LED2_IO::LATBbits.LATB8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	59;"	d	line:59
+LED2_TRIS::TRISAbits.TRISA2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	142;"	d	line:142
+LED2_TRIS::TRISBbits.TRISB8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	68;"	d	line:68
+LED3_IO::LATAbits.LATA3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	134;"	d	line:134
+LED3_IO::LATBbits.LATB9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	60;"	d	line:60
+LED3_TRIS::TRISAbits.TRISA3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	143;"	d	line:143
+LED3_TRIS::TRISBbits.TRISB9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	69;"	d	line:69
+LED4_IO::LATAbits.LATA4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	135;"	d	line:135
+LED4_IO::LATAbits.LATA9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	61;"	d	line:61
+LED4_TRIS::TRISAbits.TRISA4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	144;"	d	line:144
+LED4_TRIS::TRISAbits.TRISA9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	70;"	d	line:70
+LED5_IO::LATAbits.LATA5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	136;"	d	line:136
+LED5_IO::LATAbits.LATA8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	62;"	d	line:62
+LED5_TRIS::TRISAbits.TRISA5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	145;"	d	line:145
+LED5_TRIS::TRISAbits.TRISA8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	71;"	d	line:71
+LED6_IO::LATAbits.LATA6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	137;"	d	line:137
+LED6_IO::LATBbits.LATB12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	63;"	d	line:63
+LED6_TRIS::TRISAbits.TRISA6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	146;"	d	line:146
+LED6_TRIS::TRISBbits.TRISB12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	72;"	d	line:72
+LED7_IO::LATAbits.LATA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	138;"	d	line:138
+LED7_IO::LATCbits.LATC6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	64;"	d	line:64
+LED7_TRIS::TRISAbits.TRISA7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	147;"	d	line:147
+LED7_TRIS::TRISCbits.TRISC6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	73;"	d	line:73
+Lo	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	274;"	p	line:274	file:
+Lo	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	121;"	p	line:121	file:
+Lo	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	83;"	p	line:83	file:
+Lo::(X)(unsignedchar)(X&0x00ff)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	116;"	d	line:116
+Month	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	471;"	l	line:471
+Month	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	518;"	l	line:518
+MonthDaymax	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	514;"	l	line:514
+MonthOffset	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	467;"	l	line:467
+NULL_IO::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	168;"	d	line:168
+NULL_IO::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	89;"	d	line:89
+OC1_IO::18	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	102;"	d	line:102
+OC1_IO::18	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	181;"	d	line:181
+OC2_IO::19	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	103;"	d	line:103
+OC2_IO::19	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	182;"	d	line:182
+OC3_IO::20	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	104;"	d	line:104
+OC3_IO::20	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	183;"	d	line:183
+OC4_IO::21	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	105;"	d	line:105
+OC4_IO::21	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	184;"	d	line:184
+OC5_IO::22	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	106;"	d	line:106
+OC5_IO::22	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	185;"	d	line:185
+OC6_IO::23	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	186;"	d	line:186
+OC7_IO::24	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	187;"	d	line:187
+OC8_IO::25	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	188;"	d	line:188
+OC9_IO::35	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	196;"	d	line:196
+Offset	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	473;"	l	line:473
+PART_NUMBER::"PIC24FJ128GA010"	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	74;"	d	line:74	file:
+PART_NUMBER::"PIC24FJ256GA110"	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	128;"	d	line:128	file:
+PART_NUMBER::"PIC24FJ256GB110"	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	99;"	d	line:99	file:
+PART_NUMBER::"PIC24FJ64GA004"	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	49;"	d	line:49	file:
+PPS_SPI_SCK_TRIS::TRISCbits.TRISC8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	79;"	d	line:79
+PPS_SPI_SCK_TRIS::TRISGbits.TRISG6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	158;"	d	line:158
+PPS_SPI_SDI_TRIS::TRISCbits.TRISC4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	80;"	d	line:80
+PPS_SPI_SDI_TRIS::TRISGbits.TRISG7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	159;"	d	line:159
+PPS_SPI_SDO_TRIS::TRISCbits.TRISC5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	81;"	d	line:81
+PPS_SPI_SDO_TRIS::TRISGbits.TRISG8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	160;"	d	line:160
+PPS_SPI_SS_IO::LATAbits.LATA8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	77;"	d	line:77
+PPS_SPI_SS_IO::LATDbits.LATD12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	152;"	d	line:152
+PPS_SPI_SS_IO::LATGbits.LATG0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	155;"	d	line:155
+PPS_SPI_SS_TRIS::TRISAbits.TRISA8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	78;"	d	line:78
+PPS_SPI_SS_TRIS::TRISDbits.TRISD12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	153;"	d	line:153
+PPS_SPI_SS_TRIS::TRISGbits.TRISG0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	156;"	d	line:156
+PPS_UART2_RX_TRIS::TRISCbits.TRISC3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	86;"	d	line:86
+PPS_UART2_RX_TRIS::TRISFbits.TRISF4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	165;"	d	line:165
+PPS_UART2_TX_TRIS::TRISCbits.TRISC9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	85;"	d	line:85
+PPS_UART2_TX_TRIS::TRISFbits.TRISF5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	164;"	d	line:164
+Pos	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	225;"	l	line:225
+RESERVED	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	95;"	m	line:95	struct:STATREG
+RTCC	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	70;"	t	line:70
+RTCCCalculateWeekDay	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	466;"	f	line:466
+RTCCCalculateWeekDay	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	115;"	p	line:115	signature:()
+RTCCInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	178;"	f	line:178	signature:(void)
+RTCCInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	45;"	p	line:45	signature:(void)
+RTCCProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	80;"	f	line:80	signature:(void)
+RTCCProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	47;"	p	line:47	signature:(void)
+RTCCSet	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	347;"	f	line:347	signature:(void)
+RTCCSet	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	49;"	p	line:49	signature:(void)
+RTCCSetBinDay	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	513;"	f	line:513	signature:(unsigned char Day)
+RTCCSetBinDay	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	110;"	p	line:110	signature:(unsigned char Day)
+RTCCSetBinHour	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	445;"	f	line:445	signature:(unsigned char Hour)
+RTCCSetBinHour	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	109;"	p	line:109	signature:(unsigned char Hour)
+RTCCSetBinMin	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	425;"	f	line:425	signature:(unsigned char Min)
+RTCCSetBinMin	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	108;"	p	line:108	signature:(unsigned char Min)
+RTCCSetBinMonth	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	550;"	f	line:550	signature:(unsigned char Month)
+RTCCSetBinMonth	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	111;"	p	line:111	signature:(unsigned char Month)
+RTCCSetBinSec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	405;"	f	line:405	signature:(unsigned char Sec)
+RTCCSetBinSec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	107;"	p	line:107	signature:(unsigned char Sec)
+RTCCSetBinYear	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	570;"	f	line:570	signature:(unsigned char Year)
+RTCCSetBinYear	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	113;"	p	line:113	signature:(unsigned char Year)
+RTCCUnlock	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	375;"	f	line:375	signature:(void)
+RTCCUnlock	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	51;"	p	line:51	signature:(void)
+Res	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	156;"	l	line:156
+Result	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	134;"	l	line:134
+Result	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	224;"	l	line:224
+SCK1OUT_IO::8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	176;"	d	line:176
+SCK1OUT_IO::8	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	97;"	d	line:97
+SCK2OUT_IO::11	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	100;"	d	line:100
+SCK2OUT_IO::11	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	179;"	d	line:179
+SCK3OUT_IO::33	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	194;"	d	line:194
+SDO1_IO::7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	175;"	d	line:175
+SDO1_IO::7	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	96;"	d	line:96
+SDO2_IO::10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	178;"	d	line:178
+SDO2_IO::10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	99;"	d	line:99
+SDO3_IO::32	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	193;"	d	line:193
+SPIBUF::SPI1BUF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	61;"	d	line:61
+SPIBUF::SPI2BUF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	77;"	d	line:77
+SPIBUFbits::SPI1BUFbits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	63;"	d	line:63
+SPIBUFbits::SPI2BUFbits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	79;"	d	line:79
+SPICON2::SPI1CON2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	73;"	d	line:73
+SPICON2::SPI2CON2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	89;"	d	line:89
+SPICON2bits::SPI1CON2bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	74;"	d	line:74
+SPICON2bits::SPI2CON2bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	90;"	d	line:90
+SPICON::SPI1CON1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	71;"	d	line:71
+SPICON::SPI2CON1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	87;"	d	line:87
+SPICONbits::SPI1CON1bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	72;"	d	line:72
+SPICONbits::SPI2CON1bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	88;"	d	line:88
+SPIIE::SPI1IE	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	70;"	d	line:70
+SPIIE::SPI2IE	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	86;"	d	line:86
+SPIIF::SPI1IF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	69;"	d	line:69
+SPIIF::SPI2IF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	85;"	d	line:85
+SPIINTEN::IEC0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	65;"	d	line:65
+SPIINTEN::IEC2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	81;"	d	line:81
+SPIINTENbits::IEC0bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	67;"	d	line:67
+SPIINTENbits::IEC2bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	83;"	d	line:83
+SPIINTFLG::IFS0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	66;"	d	line:66
+SPIINTFLG::IFS2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	82;"	d	line:82
+SPIINTFLGbits::IFS0bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	68;"	d	line:68
+SPIINTFLGbits::IFS2bits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	84;"	d	line:84
+SPIMPolInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.c	49;"	f	line:49
+SPIMPolInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	139;"	p	line:139	signature:()
+SPIMPolIsTransmitOver	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.c	113;"	f	line:113
+SPIMPolIsTransmitOver	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	171;"	p	line:171	signature:()
+SPIMPolPut	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.c	78;"	f	line:78	signature:(unsigned Data)
+SPIMPolPut	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	155;"	p	line:155	signature:(unsigned Data)
+SPIM_BLOCKING_FUNCTION	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	44;"	d	line:44
+SPIM_CKE::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	47;"	d	line:47
+SPIM_CKP::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	48;"	d	line:48
+SPIM_MODE16::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	45;"	d	line:45
+SPIM_PIC24	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	43;"	d	line:43
+SPIM_PPRE::(unsigned)0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	49;"	d	line:49
+SPIM_SMP::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	46;"	d	line:46
+SPIM_SPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	38;"	d	line:38
+SPIM_SPI2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	40;"	d	line:40
+SPIM_SPRE::(unsigned)0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	50;"	d	line:50
+SPIM_STS_DATA_NOT_READY::3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	109;"	d	line:109
+SPIM_STS_TRANSMIT_NOT_OVER::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	108;"	d	line:108
+SPIM_STS_WRITE_COLLISION::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	107;"	d	line:107
+SPISTAT::SPI1STAT	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	62;"	d	line:62
+SPISTAT::SPI2STAT	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	78;"	d	line:78
+SPISTATbits::SPI1STATbits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	64;"	d	line:64
+SPISTATbits::SPI2STATbits	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	80;"	d	line:80
+SS1OUT_IO::9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	177;"	d	line:177
+SS1OUT_IO::9	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	98;"	d	line:98
+SS2OUT_IO::12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	101;"	d	line:101
+SS2OUT_IO::12	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	180;"	d	line:180
+SS3OUT_IO::34	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	195;"	d	line:195
+STATREG	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	90;"	s	line:90
+SYSCLK::8000000	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\system.h	44;"	d	line:44
+TBNR_BLINK_PERIOD::20000	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	56;"	d	line:56	file:
+TBNR_POS_DAY::5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	63;"	d	line:63	file:
+TBNR_POS_HOUR::1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	59;"	d	line:59	file:
+TBNR_POS_MAX::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	57;"	d	line:57	file:
+TBNR_POS_MIN::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	60;"	d	line:60	file:
+TBNR_POS_MONTH::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	62;"	d	line:62	file:
+TBNR_POS_SEC::3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	61;"	d	line:61	file:
+TBNR_POS_WKDAY::0	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	58;"	d	line:58	file:
+TBNR_POS_YEAR::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	64;"	d	line:64	file:
+TBannerChangeField	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	188;"	f	line:188	signature:(char increment)
+TBannerClearField	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	151;"	f	line:151
+TBannerInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	78;"	f	line:78	signature:(void)
+TBannerIsSetup	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	117;"	f	line:117
+TBannerNext	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	133;"	f	line:133
+TBannerProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	248;"	f	line:248	signature:(void)
+TBannerSetup	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	99;"	f	line:99
+Temp	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	268;"	l	line:268
+Temp	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	291;"	l	line:291
+Temp	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	110;"	l	line:110
+Temp	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.c	167;"	l	line:167
+Temp	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	135;"	l	line:135
+TimerInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\timer.c	55;"	f	line:55	signature:(void)
+TimerInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\timer.h	55;"	p	line:55	signature:(void)
+TimerIsOverflowEvent	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\timer.c	80;"	f	line:80	signature:(void)
+TimerIsOverflowEvent	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\timer.h	72;"	p	line:72	signature:(void)
+U1RTS_IO::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	172;"	d	line:172
+U1RTS_IO::4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	93;"	d	line:93
+U1TX_IO::3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	171;"	d	line:171
+U1TX_IO::3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	92;"	d	line:92
+U2RTS_IO::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	174;"	d	line:174
+U2RTS_IO::6	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	95;"	d	line:95
+U2TX_IO::5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	173;"	d	line:173
+U2TX_IO::5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	94;"	d	line:94
+U3RTS_IO::29	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	190;"	d	line:190
+U3TX_IO::28	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	189;"	d	line:189
+U4RTS_IO::31	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	192;"	d	line:192
+U4TX_IO::30	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	191;"	d	line:191
+UART2GetChar	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	134;"	f	line:134
+UART2GetChar	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	115;"	p	line:115	signature:()
+UART2Init	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	71;"	f	line:71
+UART2Init	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	73;"	p	line:73	signature:()
+UART2IsPressed	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	115;"	f	line:115
+UART2IsPressed	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	101;"	p	line:101	signature:()
+UART2PutChar	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	97;"	f	line:97	signature:(char Ch)
+UART2PutChar	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	87;"	p	line:87	signature:(char Ch)
+UART2PutDec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.c	155;"	f	line:155	signature:(unsigned char Dec)
+UART2PutDec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	130;"	p	line:130	signature:(unsigned char Dec)
+UART2_RX_TRIS::PPS_UART2_RX_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	54;"	d	line:54
+UART2_RX_TRIS::TRISFbits.TRISF4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	57;"	d	line:57
+UART2_TX_TRIS::PPS_UART2_TX_TRIS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	53;"	d	line:53
+UART2_TX_TRIS::TRISFbits.TRISF5	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\uart2.h	56;"	d	line:56
+VBNR_CHARWAIT::2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	45;"	d	line:45	file:
+VBannerInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	66;"	f	line:66	signature:(void)
+VBannerProcessEvents	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	86;"	f	line:86	signature:(void)
+WEL	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	92;"	m	line:92	struct:STATREG
+WIP	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	91;"	m	line:91	struct:STATREG
+WPEN	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	96;"	m	line:96	struct:STATREG
+Year	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	470;"	l	line:470
+Year	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	519;"	l	line:519
+_16BIT1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	169;"	v	line:169
+_16BIT2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	170;"	v	line:170
+_A2D1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	186;"	v	line:186
+_A2D2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	187;"	v	line:187
+_BLANK	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	158;"	v	line:158
+_COPYRIGHT1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	166;"	v	line:166
+_COPYRIGHT2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	167;"	v	line:167
+_EEPROMStatus_	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	99;"	u	line:99
+_FEATURES	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	175;"	v	line:175
+_FRC1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	208;"	v	line:208
+_FRC2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	209;"	v	line:209
+_I2C	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	179;"	v	line:179
+_IC	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	192;"	v	line:192
+_INTRO1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	218;"	v	line:218
+_INTRO2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	219;"	v	line:219
+_LCD_IDLE::(__cnt)_uLCDstate=1;_uLCDloops	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	60;"	d	line:60	file:
+_LCD_INIT::(__cnt)_uLCDstate++;_uLCDloops	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	61;"	d	line:61	file:
+_MCHP1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	160;"	v	line:160
+_MCHP2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	161;"	v	line:161
+_OC1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	189;"	v	line:189
+_OC2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	190;"	v	line:190
+_OP_SPEED	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	172;"	v	line:172
+_OP_VOLTAGE	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	173;"	v	line:173
+_OSC1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	205;"	v	line:205
+_OSC2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	206;"	v	line:206
+_PART1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	163;"	v	line:163
+_PART2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	164;"	v	line:164
+_PMP1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	183;"	v	line:183
+_PMP2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	184;"	v	line:184
+_PPS1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	211;"	v	line:211
+_PPS2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	212;"	v	line:212
+_RTCC1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	194;"	v	line:194
+_RTCC2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	195;"	v	line:195
+_SPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	177;"	v	line:177
+_TMR1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	202;"	v	line:202
+_TMR2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	203;"	v	line:203
+_UART	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	181;"	v	line:181
+_USBOTG1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	214;"	v	line:214
+_USBOTG2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	215;"	v	line:215
+_VREG1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	199;"	v	line:199
+_VREG2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	200;"	v	line:200
+_WDT	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	197;"	v	line:197
+__DEVICE_BANNERS__::_MCHP1,_MCHP2,	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	125;"	d	line:125	file:
+__DEVICE_BANNERS__::_MCHP1,_MCHP2,	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	152;"	d	line:152	file:
+__DEVICE_BANNERS__::_MCHP1,_MCHP2,	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	71;"	d	line:71	file:
+__DEVICE_BANNERS__::_MCHP1,_MCHP2,	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	96;"	d	line:96	file:
+__NUMBER_OF_I2C_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	51;"	d	line:51	file:
+__NUMBER_OF_I2C_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	76;"	d	line:76	file:
+__NUMBER_OF_I2C_MODULES__::'3'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	101;"	d	line:101	file:
+__NUMBER_OF_I2C_MODULES__::'3'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	130;"	d	line:130	file:
+__NUMBER_OF_IC_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	54;"	d	line:54	file:
+__NUMBER_OF_IC_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	79;"	d	line:79	file:
+__NUMBER_OF_IC_MODULES__::'9'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	104;"	d	line:104	file:
+__NUMBER_OF_IC_MODULES__::'9'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	133;"	d	line:133	file:
+__NUMBER_OF_OC_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	53;"	d	line:53	file:
+__NUMBER_OF_OC_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	78;"	d	line:78	file:
+__NUMBER_OF_OC_MODULES__::'9'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	103;"	d	line:103	file:
+__NUMBER_OF_OC_MODULES__::'9'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	132;"	d	line:132	file:
+__NUMBER_OF_SPI_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	50;"	d	line:50	file:
+__NUMBER_OF_SPI_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	75;"	d	line:75	file:
+__NUMBER_OF_SPI_MODULES__::'3'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	100;"	d	line:100	file:
+__NUMBER_OF_SPI_MODULES__::'3'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	129;"	d	line:129	file:
+__NUMBER_OF_TIMER_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	105;"	d	line:105	file:
+__NUMBER_OF_TIMER_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	134;"	d	line:134	file:
+__NUMBER_OF_TIMER_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	55;"	d	line:55	file:
+__NUMBER_OF_TIMER_MODULES__::'5'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	80;"	d	line:80	file:
+__NUMBER_OF_UART_WITH_IRDA_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	52;"	d	line:52	file:
+__NUMBER_OF_UART_WITH_IRDA_MODULES__::'2'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	77;"	d	line:77	file:
+__NUMBER_OF_UART_WITH_IRDA_MODULES__::'4'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	102;"	d	line:102	file:
+__NUMBER_OF_UART_WITH_IRDA_MODULES__::'4'	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	131;"	d	line:131	file:
+_b1_cnt	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	49;"	v	line:49
+_b2_cnt	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	50;"	v	line:50
+_b3_cnt	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	51;"	v	line:51
+_b4_cnt	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	52;"	v	line:52
+_button_press	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	53;"	v	line:53
+_date_str	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	62;"	v	line:62
+_display_state	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	66;"	v	line:66
+_pBanner	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	235;"	v	line:235
+_pBannersArray	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	225;"	v	line:225
+_pTBanner	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	44;"	v	line:44
+_pVBanner	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	48;"	v	line:48
+_rtcc_flag	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	65;"	v	line:65
+_spimpol_h_	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	35;"	d	line:35
+_temperature_str	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	76;"	v	line:76
+_time	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	52;"	v	line:52
+_time_chk	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	53;"	v	line:53
+_time_str	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	61;"	v	line:61
+_uADCCelsius	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	83;"	v	line:83
+_uADCCelsiusWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	81;"	v	line:81
+_uADCFromMemory	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	87;"	v	line:87
+_uADCState	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	78;"	v	line:78
+_uADCTemperature	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	85;"	v	line:85
+_uADCWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	79;"	v	line:79
+_uBannerCharWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	238;"	v	line:238
+_uBannerLen	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	236;"	v	line:236
+_uBannerNum	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	233;"	v	line:233
+_uBannerState	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	234;"	v	line:234
+_uBannerWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\banner.c	237;"	v	line:237
+_uLCDchar	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	66;"	v	line:66
+_uLCDloops	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	64;"	v	line:64
+_uLCDstate	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.c	65;"	v	line:65
+_uTBannerBlink	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	48;"	v	line:48
+_uTBannerBlinkWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	47;"	v	line:47
+_uTBannerCharWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	46;"	v	line:46
+_uTBannerCurPos	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	50;"	v	line:50
+_uTBannerDataPosLen	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	154;"	l	line:154	file:
+_uTBannerLen	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	45;"	v	line:45
+_uTBannerSetup	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	49;"	v	line:49
+_uTBannerState	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	43;"	v	line:43
+_uVBannerCharWait	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	50;"	v	line:50
+_uVBannerLen	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	49;"	v	line:49
+_uVBannerState	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\vbanner.c	47;"	v	line:47
+_voltage_str	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	75;"	v	line:75
+b1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	118;"	m	line:118	struct:tagButton
+b1tris	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	56;"	v	line:56
+b2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	119;"	m	line:119	struct:tagButton
+b2tris	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	57;"	v	line:57
+b3	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	120;"	m	line:120	struct:tagButton
+b3tris	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	58;"	v	line:58
+b4	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	121;"	m	line:121	struct:tagButton
+b4tris	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.c	59;"	v	line:59
+counter	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	152;"	l	line:152
+data	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\tbanner.c	189;"	l	line:189
+day	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	180;"	l	line:180
+day	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	60;"	m	line:60	struct:tagRTCC::<anonymous>
+dayOfWeek	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	186;"	l	line:186
+hour	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	183;"	l	line:183
+hr	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	58;"	m	line:58	struct:tagRTCC::<anonymous>
+ioMap	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.c	47;"	f	line:47
+ioMap	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	32;"	p	line:32	signature:()
+lockIO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.c	100;"	f	line:100
+lockIO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	34;"	p	line:34	signature:()
+mEEPROMSSHigh::EEPROM_SS_PORT=1;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	160;"	d	line:160
+mEEPROMSSLow::EEPROM_SS_PORT=0;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\eeprom.h	145;"	d	line:145
+mLCDAddr::(__lcd_addr)_uLCDchar=__lcd_ad	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	223;"	d	line:223
+mLCDCDAddr::(__lcd_addr)_uLCDchar=__lcd_ad	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	209;"	d	line:209
+mLCDClear::_uLCDstate=4;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	136;"	d	line:136
+mLCDCtl::(__lcd_cmd)_uLCDchar=__lcd_cmd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	178;"	d	line:178
+mLCDEMode::(__lcd_cmd)_uLCDchar=__lcd_cmd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	164;"	d	line:164
+mLCDFSet::(__lcd_cmd)_uLCDchar=__lcd_cmd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	195;"	d	line:195
+mLCDHome::_uLCDstate=5;_uLCDchar=0;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	150;"	d	line:150
+mLCDInit::_uLCDstate=2;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	94;"	d	line:94
+mLCDIsBusy::_uLCDstate	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	80;"	d	line:80
+mLCDPutChar::(__lcd_char)_uLCDchar=__lcd_ch	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	108;"	d	line:108
+mLCDPutCmd::(__lcd_cmd)_uLCDchar=__lcd_cmd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	122;"	d	line:122
+mLCDShift::(__lcd_cmd)_uLCDchar=__lcd_cmd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\lcd.h	181;"	d	line:181
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	408;"	p	line:408	file:
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	428;"	p	line:428	file:
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	448;"	p	line:448	file:
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	533;"	p	line:533	file:
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	553;"	p	line:553	file:
+mRTCCBin2Dec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	573;"	p	line:573	file:
+mRTCCBin2Dec::(Bin)(((Bin/10)<<4)|(Bin%10))	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	118;"	d	line:118
+mRTCCDec2Bin::(Dec)(10*(Dec>>4)+(Dec&0x0f))	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	117;"	d	line:117
+mRTCCGetBinDay	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	575;"	p	line:575	file:
+mRTCCGetBinDay::mRTCCDec2Bin(mRTCCGetDay)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	123;"	d	line:123
+mRTCCGetBinHour::mRTCCDec2Bin(mRTCCGetHour)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	121;"	d	line:121
+mRTCCGetBinMin::mRTCCDec2Bin(mRTCCGetMin)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	120;"	d	line:120
+mRTCCGetBinMonth::mRTCCDec2Bin(mRTCCGetMonth)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	124;"	d	line:124
+mRTCCGetBinSec::mRTCCDec2Bin(mRTCCGetSec)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	119;"	d	line:119
+mRTCCGetBinWkDay::mRTCCDec2Bin(mRTCCGetWkDay)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	122;"	d	line:122
+mRTCCGetBinYear::mRTCCDec2Bin(mRTCCGetYear)	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	125;"	d	line:125
+mRTCCGetDay::_time_chk.day	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	94;"	d	line:94
+mRTCCGetHour::_time_chk.hr	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	92;"	d	line:92
+mRTCCGetMin::_time_chk.min	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	91;"	d	line:91
+mRTCCGetMonth::_time_chk.mth	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	95;"	d	line:95
+mRTCCGetSec::_time_chk.sec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	90;"	d	line:90
+mRTCCGetWkDay::_time_chk.wkd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	93;"	d	line:93
+mRTCCGetYear::_time_chk.yr	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	96;"	d	line:96
+mRTCCInit::RTCCInit	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	83;"	d	line:83
+mRTCCLock::RCFGCALbits.RTCWREN=0;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	88;"	d	line:88
+mRTCCOff::RCFGCALbits.RTCEN=0;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	86;"	d	line:86
+mRTCCOn::RCFGCALbits.RTCEN=1;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	85;"	d	line:85
+mRTCCSet::RTCCSet	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	84;"	d	line:84
+mRTCCSetDay::(__rtccdat)_time_chk.day=__rtc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	102;"	d	line:102
+mRTCCSetHour::(__rtccdat)_time_chk.hr=__rtcc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	100;"	d	line:100
+mRTCCSetMin::(__rtccdat)_time_chk.min=__rtc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	99;"	d	line:99
+mRTCCSetMonth::(__rtccdat)_time_chk.mth=__rtc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	103;"	d	line:103
+mRTCCSetSec::(__rtccdat)_time_chk.sec=__rtc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	98;"	d	line:98
+mRTCCSetWkDay::(__rtccdat)_time_chk.wkd=__rtc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	101;"	d	line:101
+mRTCCSetYear::(__rtccdat)_time_chk.yr=__rtcc	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	104;"	d	line:104
+mRTCCUnlock::RTCCUnlock;	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	87;"	d	line:87
+mSPIMPolGet::SPIBUF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\spimpol.h	123;"	d	line:123
+main	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\PIC24ExplDemo.c	68;"	f	line:68	signature:(void)
+min	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	184;"	l	line:184
+min	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	57;"	m	line:57	struct:tagRTCC::<anonymous>
+month	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	181;"	l	line:181
+mth	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	61;"	m	line:61	struct:tagRTCC::<anonymous>
+prt00	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	65;"	m	line:65	struct:tagRTCC::<anonymous>
+prt01	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	66;"	m	line:66	struct:tagRTCC::<anonymous>
+prt10	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	67;"	m	line:67	struct:tagRTCC::<anonymous>
+prt11	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	68;"	m	line:68	struct:tagRTCC::<anonymous>
+rlt	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\adc.c	135;"	l	line:135
+sec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	185;"	l	line:185
+sec	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	56;"	m	line:56	struct:tagRTCC::<anonymous>
+tagButton	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\buttons.h	117;"	s	line:117
+tagRTCC	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	54;"	u	line:54
+unlock	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.h	33;"	p	line:33	signature:()
+unlockIO	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\iomapping.c	127;"	f	line:127
+wkd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	59;"	m	line:59	struct:tagRTCC::<anonymous>
+year	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.c	182;"	l	line:182
+yr	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\USB\demo\pic24demo\rtcc.h	62;"	m	line:62	struct:tagRTCC::<anonymous>

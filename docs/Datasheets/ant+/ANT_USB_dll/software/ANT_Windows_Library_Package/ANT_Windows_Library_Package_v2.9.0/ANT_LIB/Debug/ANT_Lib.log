@@ -1,0 +1,18 @@
+﻿Build started 8/23/2012 4:39:47 PM.
+     1>Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\ANT_LIB\ANT_Lib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\ANT_Lib.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Lib:
+         All outputs are up-to-date.
+         ANT_Lib.vcxproj -> C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_Lib.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\ANT_Lib.unsuccessfulbuild".
+         Touching "Debug\ANT_Lib.lastbuildstate".
+     1>Done Building Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\ANT_LIB\ANT_Lib.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.15

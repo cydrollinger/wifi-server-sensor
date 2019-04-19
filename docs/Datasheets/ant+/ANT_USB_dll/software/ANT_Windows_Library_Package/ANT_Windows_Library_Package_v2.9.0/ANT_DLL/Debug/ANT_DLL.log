@@ -1,0 +1,26 @@
+﻿Build started 8/23/2012 4:30:19 PM.
+     1>Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\ANT_DLL\ANT_DLL.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\ANT_DLL.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_DLL.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\\" ANT_LIB.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ANT_DLL.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_DLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_DLL.lib" /MACHINE:X86 /DLL Debug\ANT_DLL.dll.embed.manifest.res
+         Debug\ant.obj
+         "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_Lib.lib"
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\ANT_DLL.dll.embed.manifest" /manifest Debug\ANT_DLL.dll.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         ANT_DLL.vcxproj -> C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\Debug\ANT_DLL.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\ANT_DLL.unsuccessfulbuild".
+         Touching "Debug\ANT_DLL.lastbuildstate".
+     1>Done Building Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT_USB_dll\software\ANT_Windows_Library_Package\ANT_Windows_Library_Package_v2.9.0\ANT_DLL\ANT_DLL.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.07

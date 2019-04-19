@@ -1,0 +1,47 @@
+Partlist exported from //Missouri/madisonvii/Documents and Settings/Cy Drollinger/My Documents/eagle/WifiSensor/WiFiSensor.sch at 3/31/2015 2:38:00 PM
+
+Qty Value           Device                Parts                                              
+1                   BATTERY245PTH         BAT1                                               
+
+2                   BS3N                  SW0, SW1                                           
+
+2   .1UF            C-ERC0402             C24, C26, C21, C22, C23, C28                                           
+1   1UF             C-ERC0402             C11 
+4   10UF            C-ER                  C14, C17, C27, CM1, CM2, C6
+2   10pF            C-ERC0402             C13, C16
+2   12pF            C-ERC0402             C3, C4
+2   16pF            C-ERC0402             C1, C2
+1   33pF            C-ERC0402             C15                                                
+1   33uF            CPOL-USB              C5
+1   330pF           C-ERC0402             C12
+1   C-ERC0402       C-ERC0402             C25 
+ 
+1   2.2uH           L-ER                  L12                                                
+1   4.7uH           L-ER                  L11                                                
+3                   1X1RGB                LED0, LED1, LED2                                   
+
+3   10k             R-ERR0402             R21, R202, R204                                    
+2   0               R-US_R1206            R1, R2                                             
+1   1k74            R-ERR0402             R11                                                
+7   4k7             R-ERR0402             RM1, RM2, RM3, RM4, RM5, RM6, RM7                  
+1   12_127          12_127                U$11                                               
+1   12k7            R-ERR0402             R13                                                
+1   15k             R-ERR0402             R20                                                
+10  100             R-ERR0402             R22, R23, R24, R25, R26, R28, R29, R201, R207, R208
+3   100k            R-ERR0402             R14, R16, R18                                      
+1   105k            R-ERR0402             R12                                                
+1   121k            R-ERR0402             R19                                                
+2   313k            R-ERR0402             R15, R17                                           
+2   470             R-ERR0402             R203, R205                                         
+1   R-ERR0402       R-ERR0402             R206                                               
+ 
+1   8MHz            CX532                 OSC2                                               
+1   32.768kHz       ECX32                 OSC1
+                                             
+1   LTC3558         LTC3558               IC1                                                
+1   M25P16          M25P16                IC3                                                
+1   PICMX32695F512H PICMX32695F512H       IC2                                                
+1   MRF24WG0MA/MB   MRF24WG0MA/MB         MOD1                                               
+
+1   usb             MINI-USB-UX60A-MB-5ST X1                                                 
+1                   M06LOCK               JP1                                                

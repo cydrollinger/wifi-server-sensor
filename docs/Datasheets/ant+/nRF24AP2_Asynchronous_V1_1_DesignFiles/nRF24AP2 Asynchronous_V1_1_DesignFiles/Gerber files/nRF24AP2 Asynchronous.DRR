@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: nRF24AP2 Asynchronous.PcbDoc   29.05.2009  11:06:41
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : nRF24AP2 Asynchronous.TXT
+EIA File   : nRF24AP2 Asynchronous.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        12mil (0.3048mm)         Round          9                0.86 Inch (21.96 mm)
+T2        16mil (0.4064mm)         Round          32               4.36 Inch (110.65 mm)
+---------------------------------------------------------------------------
+Totals                                            41               5.22 Inch (132.61 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

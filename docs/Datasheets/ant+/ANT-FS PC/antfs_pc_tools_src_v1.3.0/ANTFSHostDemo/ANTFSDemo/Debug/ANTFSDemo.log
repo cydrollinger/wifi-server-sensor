@@ -1,0 +1,46 @@
+﻿Build started 9/6/2012 5:10:16 PM.
+     1>Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANTFSDemo\ANTFSDemo.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\ANTFSDemo.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\ANT_LIB\software\system /I..\ANT_LIB\software\serial /I..\ANT_LIB\software\serial\device_management /I..\ANT_LIB\software\antfs /I..\ANT_LIB\common /I..\ANT_LIB\inc /I..\ANT_LIB\libraries /I..\ANT_LIB\software\USB /I..\ANT_LIB\software\USB\devices /I..\ANT_LIB\software\USB\device_handles /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D DEBUG_FILE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANTFSDemo\AES_CTR.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt ANTFSDemo.cpp Auth.cpp Form1.cpp ThreadCreater.cpp /clr:nostdlib 
+         ANTFSDemo.cpp
+         Auth.cpp
+         Form1.cpp
+         ThreadCreater.cpp
+         Generating Code...
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\ANT_LIB\software\system /I..\ANT_LIB\software\serial /I..\ANT_LIB\software\serial\device_management /I..\ANT_LIB\software\antfs /I..\ANT_LIB\common /I..\ANT_LIB\inc /I..\ANT_LIB\libraries /I..\ANT_LIB\software\USB /I..\ANT_LIB\software\USB\devices /I..\ANT_LIB\software\USB\device_handles /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D DEBUG_FILE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Documents and Settings\User\Local Settings\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       CoreResGen:
+         "C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANTFSDemo\AES_CTR.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /r:"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /compile Auth.resx,Debug\ANTFSDemo.Auth.resources Form1.resX,Debug\ANTFSDemo.Form1.resources
+         Processing resource file "Auth.resx" into "Debug\ANTFSDemo.Auth.resources".
+         Processing resource file "Form1.resX" into "Debug\ANTFSDemo.Form1.resources".
+       ResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANTFSDemo.exe" /NOLOGO /LIBPATH:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\\" ANT_LIB.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\ANTFSDemo.Auth.resources /ASSEMBLYRESOURCE:Debug\ANTFSDemo.Form1.resources /INCLUDE:"__DllMainCRTStartup@12" /MANIFEST /ManifestFile:"Debug\ANTFSDemo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANTFSDemo.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\ANTFSDemo.obj
+         Debug\AssemblyInfo.obj
+         Debug\Auth.obj
+         Debug\Form1.obj
+         Debug\stdafx.obj
+         Debug\ThreadCreater.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANT_LIB.lib"
+     1>ANT_LIB.lib(dsi_thread_win32.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+         ANTFSDemo.vcxproj -> C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANTFSDemo.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANTFSDemo.exe;#1" /manifest Debug\ANTFSDemo.exe.intermediate.manifest
+       _CopyFilesMarkedCopyLocal:
+         Copying file from "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANTFSDemo\AES_CTR.dll" to "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\AES_CTR.dll".
+       FinalizeBuildStatus:
+         Deleting file "Debug\ANTFSDemo.unsuccessfulbuild".
+         Touching "Debug\ANTFSDemo.lastbuildstate".
+     1>Done Building Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANTFSDemo\ANTFSDemo.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.32

@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ChipSelect::PORTFbits.RF2	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	32;"	d	line:32
+DSPIC33F	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	30;"	d	line:30
+Data	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	65;"	l	line:65
+FWDTEN_OFF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	47;"	v	line:47
+FWDTEN_OFF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	54;"	v	line:54
+GWRP_OFF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	51;"	v	line:51
+HDByteReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	23;"	p	line:23	signature:( unsigned char, unsigned char, unsigned char * , unsigned char )
+HDByteReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	123;"	f	line:123	signature:(unsigned char HighAdd, unsigned char LowAdd, unsigned char *rdptr, unsigned char length )
+HDByteWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	22;"	p	line:22	signature:( unsigned char, unsigned char, unsigned char )
+HDByteWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	100;"	f	line:100	signature:(unsigned char HighAdd, unsigned char LowAdd, unsigned char Data )
+HDPageWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	24;"	p	line:24	signature:( unsigned char, unsigned char, unsigned char * )
+HDPageWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	143;"	f	line:143	signature:( unsigned char HighAdd, unsigned char LowAdd, unsigned char *wrptr )
+HDSequentialReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	25;"	p	line:25	signature:( unsigned char, unsigned char, unsigned char *, unsigned char )
+HDSequentialReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	181;"	f	line:181	signature:( unsigned char HighAdd, unsigned char LowAdd, unsigned char *rdptr, unsigned char length )
+HighAdd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	63;"	l	line:63
+InitPIC	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	95;"	f	line:95	signature:(void)
+InitPIC	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	7;"	p	line:7	signature:(void)
+LDByteReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	18;"	p	line:18	signature:( unsigned char, unsigned char * , unsigned char)
+LDByteReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	41;"	f	line:41	signature:(unsigned char LowAdd, unsigned char *rdptr, unsigned char length )
+LDByteWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	17;"	p	line:17	signature:( unsigned char, unsigned char)
+LDByteWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	18;"	f	line:18	signature:(unsigned char LowAdd, unsigned char Data )
+LDPageWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	19;"	p	line:19	signature:( unsigned char, unsigned char *)
+LDPageWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	59;"	f	line:59	signature:( unsigned char LowAdd, unsigned char *wrptr )
+LDSequentialReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	20;"	p	line:20	signature:( unsigned char, unsigned char *, unsigned char )
+LDSequentialReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	82;"	f	line:82	signature:( unsigned char LowAdd, unsigned char *rdptr, unsigned char length )
+Length	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	66;"	l	line:66
+LowAdd	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	64;"	l	line:64
+MegaHDPageWriteSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	157;"	f	line:157	signature:( unsigned char HigherAdd, unsigned char HighAdd, unsigned char LowAdd, unsigned char *wrptr )
+MegaHDSequentialReadSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	26;"	p	line:26	signature:( unsigned char, unsigned char, unsigned char, unsigned char *, unsigned char )
+POSCMD_HS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	53;"	v	line:53
+POSCMOD_HS	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	44;"	v	line:44
+PageSize::0x80	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	34;"	d	line:34
+PageString	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	67;"	l	line:67
+PutStringSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	8;"	p	line:8	signature:( unsigned char * )
+PutStringSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	199;"	f	line:199	signature:( unsigned char *wrptr )
+ReadSPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	15;"	p	line:15	signature:( void )
+ReadSPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	306;"	f	line:306
+ReadStatus	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	11;"	p	line:11	signature:( void )
+ReadStatus	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	250;"	f	line:250	signature:(void)
+SPIWIPPolling	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	9;"	p	line:9	signature:( void )
+SPIWIPPolling	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	218;"	f	line:218	signature:(void)
+Status	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	220;"	l	line:220
+TEMP_OFF	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	52;"	v	line:52
+WriteEnable	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	10;"	p	line:10	signature:( void )
+WriteEnable	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	237;"	f	line:237	signature:(void)
+WriteSPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	13;"	p	line:13	signature:(unsigned int data_out)
+WriteSPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	267;"	f	line:267	signature:(unsigned int data_out)
+getcSPI1::ReadSPI1	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	33;"	d	line:33
+getsSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.h	14;"	p	line:14	signature:( unsigned char *, unsigned char )
+getsSPI	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	287;"	f	line:287	signature:( unsigned char *rdptr, unsigned char length )
+main	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	61;"	f	line:61	signature:(void)
+n	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069.c	69;"	l	line:69
+x	C:\WORK\Proposals\GURU\Heavey Powder\product\microchip\spi_mem_c_compiler\AN1069\AN1069_spi.c	201;"	l	line:201

@@ -1,0 +1,263 @@
+-------------------------------------------------------------------------
+--                                                                     --
+-- Copyright Microchip Technology Inc. 2007.  All rights reserved.     --
+--                                                                     --
+--                                                                     --
+--                         IMPORTANT NOTICE                            --
+--                                                                     --
+--                                                                     --
+-- Software License Agreement                                          --
+--								       --
+-- The software supplied herewith by Microchip Technology Incorporated --
+-- (the “Company”) for its PICmicro® Microcontroller is intended and   --
+-- supplied to you, the Company’s customer, for use solely and         --
+-- exclusively on Microchip PICmicro Microcontroller products. The     --
+-- software is owned by the Company and/or its supplier, and is        --
+-- protected under applicable copyright laws. All rights are reserved. --
+-- Any use in violation of the foregoing restrictions may subject the  --
+-- user to criminal sanctions under applicable laws, as well as to     --
+-- civil liability for the breach of the terms and conditions of this  --
+-- license.                                                            --
+--								       --
+-- THIS SOFTWARE IS PROVIDED IN AN “AS IS” CONDITION. NO WARRANTIES,   --
+-- WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED   --
+-- TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A         --
+-- PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT,   --
+-- IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL OR          --
+-- CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.                   --
+-------------------------------------------------------------------------
+
+-- BSDL file
+
+-- File Name:     
+-- File Revision: Revision: 1.0 
+-- Date created:  9/3/2009 
+-- Support:       brant.ivey@microchip.com
+
+-- Device:        PIC24FJ64GB002
+-- Silicon Rev:   N/A
+-- Package:       28 pin DIP/SOIC 
+
+-- Notes:
+-- 	1. The behavior of the Oscillator Boundary Scan cells are dependant
+--    on the Oscillator Fuse settings, and therefore caution must be used
+--    when controlling the the BSC's on RA2(PIN9) and RA3(PIN10).
+
+-- 	2. This BSDL file will function for both DIP and SOIC packages. If
+--    SOIC is needed then replace DIP28 with SOIC28 in both the PORT 
+--    DEFINITIONS and PIN MAPPING SECTIONS below. However, since both
+--	packages have the same pinout the DIP designator can be used for
+--	the SOIC package.
+
+
+
+-- ************************************************************************
+-- *                             PORT DEFINITIONS                         *
+-- ************************************************************************
+
+entity PIC24FJ64GB002 is
+  generic (PHYSICAL_PIN_MAP : string := "DIP28");
+
+port (
+ TCK		: in      bit ; 
+ TDI		: in      bit ; 
+ TDO		: out     bit ; 
+ TMS		: in      bit ; 
+ MCLR		: inout   bit ;
+ RA0		: inout   bit ;
+ RA1		: inout   bit ;
+ RA2		: inout   bit ;
+ RA3		: inout   bit ;
+ RA4		: inout   bit ;
+ RB0		: inout   bit ;
+ RB1		: inout   bit ;
+ RB2     	: inout   bit ;
+ RB3     	: inout   bit ;
+ RB4     	: inout   bit ;
+ RB5     	: inout   bit ;
+ RB7     	: inout   bit ;
+ RB13   	: inout   bit ;
+ RB14   	: inout   bit ;
+ RB15    	: inout   bit ;
+ VDD1    	: linkage bit ;
+ VDD2    	: linkage bit ;
+ VDDCORE 	: linkage bit ;
+ DISVREG   	: linkage bit ;
+ VSS1    	: linkage bit ;
+ VSS2    	: linkage bit ; 
+ VUSB   	: linkage bit ; 
+ VBUS		: linkage bit
+
+);
+
+use STD_1149_1_2001.all;
+
+attribute COMPONENT_CONFORMANCE of PIC24FJ64GB002 : entity is "STD_1149_1_2001";
+
+-- *********************************************************************
+-- *                             PIN MAPPING                           *
+-- *********************************************************************
+
+attribute PIN_MAP of PIC24FJ64GB002 : entity is PHYSICAL_PIN_MAP;
+
+constant DIP28 : PIN_MAP_STRING :=
+--I/O Pins
+" MCLR:		1	,"&
+" RA0:		2	,"&
+" RA1:		3	,"&
+" RB0:		4	,"&
+" RB1:		5	,"&
+" RB2:		6	,"&
+" RB3:		7	,"&
+" VSS1:		8	,"&
+" RA2:		9	,"&
+" RA3:		10	,"&
+" RB4:		11	,"&
+" RA4:		12	,"&
+" VDD1:		13	,"&
+" TMS:		14	,"&
+" VBUS:		15	,"&
+" TDI:		16	,"&
+" TCK:		17	,"&
+" TDO:		18	,"&
+" DISVREG:	19	,"&
+" VDDCORE:	20	,"&
+" RB10:		21	,"&
+" RB11:		22	,"&
+" VUSB:		23	,"&
+" RB13:		24	,"&
+" RB14:		25	,"&
+" RB15:		26	,"&
+" VSS2:		27	,"&
+" VDD2:		28	";
+
+
+
+-- *********************************************************************
+-- *                       IEEE 1149.1 TAP PORTS                       *
+-- *********************************************************************
+
+attribute TAP_SCAN_IN of TDI     : signal is true;
+attribute TAP_SCAN_MODE of TMS   : signal is true;
+attribute TAP_SCAN_OUT of TDO    : signal is true;
+attribute TAP_SCAN_CLOCK of TCK  : signal is (10.00e6,BOTH);
+
+-- *********************************************************************
+-- *                   INSTRUCTIONS AND REGISTER ACCESS                *
+-- *********************************************************************
+
+attribute INSTRUCTION_LENGTH of PIC24FJ64GB002 : entity is 4;
+
+attribute INSTRUCTION_OPCODE of PIC24FJ64GB002 : entity is
+  "BYPASS            (1111), "&
+  "EXTEST            (0011), "&
+  "SAMPLE            (0001), "&
+  "PRELOAD           (0001), "&
+  "IDCODE            (0010), "&
+  "MCHP_CMD          (1000)," &
+  "MCHP_SCAN 	     (0111)," &
+  "HIGHZ             (0100)";
+
+attribute INSTRUCTION_CAPTURE of PIC24FJ64GB002 : entity is "0001";
+
+attribute IDCODE_REGISTER of PIC24FJ64GB002 : entity is
+ "XXXX"             &     -- Version
+ "0100001000000111" &     -- Part number
+ "00000101001"      &     -- Manufacturer ID = 11'h029
+ "1";                     -- Required by IEEE std 1149.1-2001 
+ 
+
+attribute REGISTER_ACCESS of PIC24FJ64GB002 : entity is
+"BOUNDARY (PRELOAD,SAMPLE,EXTEST),"&
+"BYPASS (BYPASS,HIGHZ),"&
+"MCHP_CMD[4] (MCHP_CMD,MCHP_SCAN),"&
+"DEVICE_ID (IDCODE)";
+
+-- *********************************************************************
+-- *                    BOUNDARY SCAN CELL INFORMATION                 *
+-- *********************************************************************
+
+attribute BOUNDARY_LENGTH of PIC24FJ64GB002 : entity is 48;
+attribute BOUNDARY_REGISTER of PIC24FJ64GB002 : entity is
+
+--BSC group 0 for I/O pin 12
+" 0   ( BC_1 , RA4, input, X)," &
+" 1  ( BC_1 , *,  control, 0)," &
+" 2  ( BC_1 , RA4, output3, X, 1, 0, Z)," &
+
+--BSC group 1 for I/O pin 11
+" 3  ( BC_1 , RB4, input, X)," &
+" 4  ( BC_1 , *,  control, 0)," &
+" 5  ( BC_1 , RB4, output3, X, 4, 0, Z)," &
+
+--BSC group 2 for I/O pin 10
+" 6  ( BC_1 , RA3, input, X), " &
+" 7  ( BC_1 , *,  control, 0)," &
+" 8  ( BC_1 , RA3, output3, X, 7, 0, Z)," &
+
+--BSC group 3 for I/O pin 9
+" 9  ( BC_1 , RA2, input, X)," &
+" 10  ( BC_1 , *,  control, 0)," &
+" 11  ( BC_1 , RA2, output3, X, 10, 0, Z)," &
+
+--BSC group 4 for I/O pin 7
+" 12  ( BC_1 , RB3, input, X)," &
+" 13  ( BC_1 , *,  control, 0)," &
+" 14  ( BC_1 , RB3, output3, X, 13, 0, Z)," &
+
+--BSC group 5 for I/O pin 6
+" 15  ( BC_1 , RB2, input, X)," &
+" 16  ( BC_1 , *,  control, 0)," &
+" 17  ( BC_1 , RB2, output3, X, 16, 0, Z)," &
+
+--BSC group 6 for I/O pin 5
+" 18  ( BC_1 , RB1, input, X)," &
+" 19  ( BC_1 , *,  control, 0)," &
+" 20  ( BC_1 , RB1, output3, X, 19, 0, Z)," &
+
+--BSC group 7 for I/O pin 4
+" 21  ( BC_1 , RB0, input, X)," &
+" 22  ( BC_1 , *,  control, 0)," &
+" 23  ( BC_1 , RB0, output3, X, 22, 0, Z)," &
+
+--BSC group 8 for I/O pin 3
+" 24   ( BC_1 , RA1, input, X)," &
+" 25   ( BC_1 , *,  control, 0)," &
+" 26   ( BC_1 , RA1, output3, X, 25, 0, Z)," &
+
+--BSC group 9 for I/O pin 2
+" 27   ( BC_1 , RA0, input, X)," &
+" 28   ( BC_1 , *,  control, 0)," &
+" 29   ( BC_1 , RA0, output3, X, 28, 0, Z)," &
+
+--BSC group 10 for I/O pin 1
+" 30   ( BC_1 , MCLR, input, X)," &
+" 31   ( BC_1 , *,  control, 0)," &
+" 32   ( BC_1 , MCLR, output3, X, 31, 0, Z)," &
+
+--BSC group 11 for I/O pin 26
+" 33  ( BC_1 , RB15, input, X)," &
+" 34  ( BC_1 , *,  control, 0)," &
+" 35  ( BC_1 , RB15, output3, X, 34, 0, Z)," &
+
+--BSC group 12 for I/O pin 25
+" 36  ( BC_1 , RB14, input, X)," &
+" 37  ( BC_1 , *,  control, 0)," &
+" 38  ( BC_1 , RB14, output3, X, 37, 0, Z)," &
+
+--BSC group 13 for I/O pin 24
+" 39  ( BC_1 , RB13, input, X), " &
+" 40  ( BC_1 , *,  control, 0)," &
+" 41  ( BC_1 , RB13, output3, X, 40, 0, Z)," &
+
+--BSC group 14 for I/O pin 22
+" 42  ( BC_1 , RB11, input, X)," &
+" 43  ( BC_1 , *,  control, 0)," &
+" 44  ( BC_1 , RB11, output3, X, 43, 0, Z)," &
+
+--BSC group 15 for I/O pin 21
+" 45  ( BC_1 , RB10, input, X), " &
+" 46  ( BC_1 , *,  control, 0)," &
+" 47  ( BC_1 , RB10, output3, X, 46, 0, Z)";
+--
+end PIC24FJ64GB002;

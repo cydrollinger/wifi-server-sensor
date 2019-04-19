@@ -1,0 +1,2036 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Release Notes for MPLAB C Compiler for 16-Bit Devices, v3.22</title>
+<style type="text/css">
+span {
+        font-family: Arial;
+        color: #000000;
+        background: #FFFFFF;
+        font-size: 10pt;
+}
+pre {
+        font-family: monospace;
+        color: #000000;
+        background: #FFFFFF;
+        font-size: 10pt;
+}
+p.Heading0, li.Heading0, div.Heading0, span.Heading0 {
+        font-size:14.0pt;
+        font-family:Arial;
+        font-weight:bold;
+}
+h1 {
+        margin-top:12.0pt;
+        margin-right:0in;
+        margin-bottom:3.0pt;
+        margin-left:.3in;
+        text-indent:-.3in;
+        page-break-after:avoid;
+        tab-stops:list .3in;
+        font-size:14.0pt;
+        font-family:Arial;
+}
+h2 {
+        margin-top:12.0pt;
+        margin-right:0in;
+        margin-bottom:3.0pt;
+        margin-left:.4in;
+        text-indent:-.4in;
+        page-break-after:avoid;
+        mso-outline-level:2;
+        tab-stops:list .4in;
+        font-size:12.0pt;
+        font-family:Arial;
+}
+DL, DT, OL, UL, LI, DD {
+    list-style-position: outside;
+}
+pre {
+    font-family: monospace;
+    font-size: 10pt;
+}
+table {
+    font-size: 10pt;
+}
+</style>
+</head><body style="" vlink="purple" lang="EN-US" link="blue">
+<span><div class="Heading0">Release Notes for MPLAB® C Compiler for 
+PIC24
+ MCUs and dsPIC DSCs<br></div>
+v3.22<br>
+15 December 2009<br>
+<br>
+<div class="Heading0">Table of Contents</div>
+
+<ol>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#GPL">GNU General Public License</a></li>
+<li><a href="#Devices">Devices Supported</a></li>
+<li><a href="#Install">Installation and Upgrades</a></li>
+<li><a href="#Document">16-bit Language Tools Documentation</a></li>
+<li><a href="#WhatsNew">What's New in this Release</a></li>
+<li><a href="#Migration">Migration Issues</a></li>
+<li><a href="#DocUpdates">Documentation Updates</a></li>
+<li><a href="#Fixed">Fixed Issues</a></li>
+<li><a href="#Limitations">Limitations</a></li>
+<li><a href="#EnvChanges">Environment Variables Modified</a></li>
+<li><a href="#Support">Customer Support</a></li>
+</ol>
+
+<hr><br>
+
+<ol style="list-style-type: decimal;">
+<li class="Heading0"><h1><a name="Overview">
+Overview
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<p>The 16-bit language tools consist of a compiler (pic30-gcc.exe), an
+   assembler (pic29-as.exe), a linker (pic30-ld.exe), and an archiver/
+   librarian (pic30-ar.exe). Additional tools distributed with this
+   release include a binary to Intel Hex converter (pic30-bin2hex.exe)
+   and a command-line simulator (sim30.exe).</p>
+
+<p>The 16-bit language tool official names are:
+   </p><ul><li>MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs
+       <ul><li>MPLAB C Compiler for PIC24 MCUs</li>
+           <li>MPLAB C Compiler for dsPIC DSCs</li>
+       </ul>
+       </li><li>MPLAB Assembler for PIC24 MCUs and dsPIC DSCs</li>
+       <li>MPLAB Object Linker for PIC24 MCUs and dsPIC DSCs</li>
+       <li>MPLAB Object Archiver/Librarian for PIC24 MCUs and dsPIC DSCs</li>
+   </ul>
+<p></p>
+<p>The command-line simulator (sim30.exe) included with the tools
+   may be used to test and debug C or assembly-language programs.
+   The simulator supports the complete PIC24/dsPIC® instruction set, and
+ a
+   restricted set of peripherals (two UARTS, five General Purpose
+   Timers, 10-bit A/D converter, 12-bit A/D converter, PWM, Input
+   Capture, Input Change Notification, I/O ports, Data RAM, Program
+   Flash, Data EEPROM, and an Interrupt Controller).</p>
+
+<p>As described in the user's guides, all of the language tools are
+   sensitive to case on the command-line, including the case of file
+   names. In particular, the C compiler shell (pic30-gcc) requires
+   that C source files be named on the command-line with a lower-case
+   .c extension. If an upper-case .C filename extension is used,
+   the compiler assumes that the file is a C++ file, which is not
+   supported.</p>
+ 
+
+</span>
+<li class="Heading0"><h1><a name="GPL">
+GNU General Public License
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<p>With the exceptions noted below, the 16-bit tools are written and
+   distributed under the GNU General Public License (GPL) which means
+   that its source code is freely distributed and available to the
+   public.</p>
+
+<p>The source for the tools under the GNU GPL may be downloaded
+   separately from the Microchip WWW web page. You may read the
+   GNU GPL in the file named COPYING located the top level of your
+   install directory. A general discussion of principles underlying
+   the GPL may be found at 
+   <a href="http://www.gnu.org/copyleft">www.gnu.org/copyleft</a>.</p>
+
+<p>Exceptions to the GNU GPL:</p>
+<ul>
+<li>   pic30-lm</li>
+<li>   pic30-pa</li>
+<li>   sim30</li>
+</ul>
+
+<p>Support code provided for the header files, linker scripts, and
+   runtime libraries are also exceptions to the GPL, and therefore not
+   covered under the GPL.</p>
+
+
+</span>
+<li class="Heading0"><h1><a name="Devices">
+Devices Supported
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<p>Devices listed in <b>bold</b> are new for the current release.</p>
+
+<!--  This is now commented out...
+
+  **************** GENERATED TABLE START
+  ***
+  ***  Look in pic30-libs/support/output.html for the generated info
+  ***
+  ****************
+-->
+
+<p>The following <b>PIC24 F KA </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th>  4K devices</th> <th>  8K devices</th> <th> 16K devices</th>
+ 
+</tr> 
+<tr>  <td></td>  <td> PIC24F08KA101</td> <td> PIC24F16KA101</td></tr>
+<tr>  <td></td>  <td> PIC24F08KA102</td> <td> PIC24F16KA102</td></tr>
+<tr>  <td> PIC24F04KA200</td> <td></td>  <td></td> </tr>
+<tr>  <td> PIC24F04KA201</td> <td></td>  <td></td> </tr>
+</tbody></table>
+</p><p>The following <b>PIC24 F GA </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th> 16K devices</th> <th> 32K devices</th> <th> 48K devices</th>
+ <th> 64K devices</th> <th> 96K devices</th> <th>128K devices</th> <th>192K
+ devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> PIC24FJ16GA002</td> <td> PIC24FJ32GA002</td> <td> 
+PIC24FJ48GA002</td> <td> PIC24FJ64GA002</td> <td></td>  <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td> PIC24FJ16GA004</td> <td> PIC24FJ32GA004</td> <td> 
+PIC24FJ48GA004</td> <td> PIC24FJ64GA004</td> <td></td>  <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24FJ64GA006</td> <td> 
+PIC24FJ96GA006</td> <td> PIC24FJ128GA006</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24FJ64GA008</td> <td> 
+PIC24FJ96GA008</td> <td> PIC24FJ128GA008</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24FJ64GA010</td> <td> 
+PIC24FJ96GA010</td> <td> PIC24FJ128GA010</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td> PIC24FJ32GA102</td> <td></td>  <td> PIC24FJ64GA102</td>
+ <td></td>  <td></td>  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td> PIC24FJ32GA104</td> <td></td>  <td> PIC24FJ64GA104</td>
+ <td></td>  <td></td>  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24FJ128GA106</td> <td> PIC24FJ192GA106</td> <td> PIC24FJ256GA106</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24FJ128GA108</td> <td> PIC24FJ192GA108</td> <td> PIC24FJ256GA108</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24FJ128GA110</td> <td> PIC24FJ192GA110</td> <td> PIC24FJ256GA110</td></tr>
+</tbody></table>
+</p><p>The following <b>PIC24 F GB </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th> 32K devices</th> <th> 64K devices</th> <th>128K devices</th>
+ <th>192K devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> PIC24FJ32GB002</td> <td> PIC24FJ64GB002</td> <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td> PIC24FJ32GB004</td> <td> PIC24FJ64GB004</td> <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td> PIC24FJ64GB106</td> <td> PIC24FJ128GB106</td> <td>
+ PIC24FJ192GB106</td> <td> PIC24FJ256GB106</td></tr>
+<tr>  <td></td>  <td> PIC24FJ64GB108</td> <td> PIC24FJ128GB108</td> <td>
+ PIC24FJ192GB108</td> <td> PIC24FJ256GB108</td></tr>
+<tr>  <td></td>  <td> PIC24FJ64GB110</td> <td> PIC24FJ128GB110</td> <td>
+ PIC24FJ192GB110</td> <td> PIC24FJ256GB110</td></tr>
+<tr>  <td></td>  <td></td>  <td> PIC24FJ128GB206</td> <td></td>  <td> 
+PIC24FJ256GB206</td></tr>
+<tr>  <td></td>  <td></td>  <td> PIC24FJ128GB210</td> <td></td>  <td> 
+PIC24FJ256GB210</td></tr>
+</tbody></table>
+</p><p>The following <b>PIC24 F DA </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th>128K devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> PIC24FJ128DA106</td> <td> PIC24FJ256DA106</td></tr>
+<tr>  <td> PIC24FJ128DA110</td> <td> PIC24FJ256DA110</td></tr>
+<tr>  <td> PIC24FJ128DA206</td> <td> PIC24FJ256DA206</td></tr>
+<tr>  <td> PIC24FJ128DA210</td> <td> PIC24FJ256DA210</td></tr>
+</tbody></table>
+</p><p>The following <b>PIC24 H GP </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th> 12K devices</th> <th> 16K devices</th> <th> 32K devices</th>
+ <th> 64K devices</th> <th>128K devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> PIC24HJ12GP201</td> <td></td>  <td></td>  <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td> PIC24HJ12GP202</td> <td></td>  <td> PIC24HJ32GP202</td> <td> 
+PIC24HJ64GP202</td> <td> PIC24HJ128GP202</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> PIC24HJ32GP204</td> <td> PIC24HJ64GP204</td>
+ <td> PIC24HJ128GP204</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP206[A]</td> <td> 
+PIC24HJ128GP206[A]</td> <td> PIC24HJ256GP206[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP210[A]</td> <td> 
+PIC24HJ128GP210[A]</td> <td> PIC24HJ256GP210[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td> PIC24HJ32GP302</td> <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td> PIC24HJ16GP304</td> <td> PIC24HJ32GP304</td> <td></td>
+  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24HJ128GP306[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24HJ128GP310[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP502</td> <td> 
+PIC24HJ128GP502</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP504</td> <td> 
+PIC24HJ128GP504</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP506[A]</td> <td> 
+PIC24HJ128GP506[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> PIC24HJ64GP510[A]</td> <td> 
+PIC24HJ128GP510[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+PIC24HJ256GP610[A]</td></tr>
+</tbody></table>
+</p><p>The following <b>dsPIC30 </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th>30F10xx</th> <th>30F20xx</th> <th>30F30xx</th> <th>30F40xx</th>
+ <th>30F50xx</th> <th>30F60xx</th> 
+</tr> 
+<tr>  <td> dsPIC30F1010</td> <td> dsPIC30F2010</td> <td> dsPIC30F3010</td>
+ <td></td>  <td></td>  <td> dsPIC30F6010[A]</td></tr>
+<tr>  <td></td>  <td> dsPIC30F2011</td> <td> dsPIC30F3011</td> <td> 
+dsPIC30F4011</td> <td> dsPIC30F5011</td> <td> dsPIC30F6011[A]</td></tr>
+<tr>  <td></td>  <td> dsPIC30F2012</td> <td> dsPIC30F3012</td> <td> 
+dsPIC30F4012</td> <td></td>  <td> dsPIC30F6012[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC30F3013</td> <td> dsPIC30F4013</td>
+ <td> dsPIC30F5013</td> <td> dsPIC30F6013[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC30F3014</td> <td></td>  <td></td> 
+ <td> dsPIC30F6014[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td> dsPIC30F5015</td>
+ <td> dsPIC30F6015</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td> dsPIC30F5016</td>
+ <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC30F2020</td> <td></td>  <td></td>  <td></td> 
+ <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC30F2023</td> <td></td>  <td></td>  <td></td> 
+ <td></td> </tr>
+</tbody></table>
+</p><p>The following <b>dsPIC33F GP </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th> 12K devices</th> <th> 16K devices</th> <th> 32K devices</th>
+ <th> 64K devices</th> <th>128K devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> dsPIC33FJ12GP201</td> <td></td>  <td></td>  <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td> dsPIC33FJ12GP202</td> <td></td>  <td> dsPIC33FJ32GP202</td> <td>
+ dsPIC33FJ64GP202</td> <td> dsPIC33FJ128GP202</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GP204</td> <td> 
+dsPIC33FJ64GP204</td> <td> dsPIC33FJ128GP204</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP206[A]</td> <td>
+ dsPIC33FJ128GP206[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GP302</td> <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC33FJ16GP304</td> <td> dsPIC33FJ32GP304</td> <td></td>
+  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP306[A]</td> <td>
+ dsPIC33FJ128GP306[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP310[A]</td> <td>
+ dsPIC33FJ128GP310[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+dsPIC33FJ256GP506[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+dsPIC33FJ256GP510[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP706[A]</td> <td>
+ dsPIC33FJ128GP706[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP708[A]</td> <td>
+ dsPIC33FJ128GP708[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP710[A]</td> <td>
+ dsPIC33FJ128GP710[A]</td> <td> dsPIC33FJ256GP710[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP802</td> <td> 
+dsPIC33FJ128GP802</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64GP804</td> <td> 
+dsPIC33FJ128GP804</td> <td></td> </tr>
+</tbody></table>
+</p><p>The following <b>dsPIC33F GS </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th>  6K devices</th> <th> 16K devices</th> <th> 32K devices</th>
+ <th> 64K devices</th> 
+</tr> 
+<tr>  <td> dsPIC33FJ06GS101</td> <td></td>  <td></td>  <td></td> </tr>
+<tr>  <td> dsPIC33FJ06GS102</td> <td></td>  <td></td>  <td></td> </tr>
+<tr>  <td> dsPIC33FJ06GS202</td> <td></td>  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC33FJ16GS402</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC33FJ16GS404</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GS406</td> <td> 
+dsPIC33FJ64GS406</td></tr>
+<tr>  <td></td>  <td> dsPIC33FJ16GS502</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC33FJ16GS504</td> <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GS606</td> <td> 
+dsPIC33FJ64GS606</td></tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GS608</td> <td> 
+dsPIC33FJ64GS608</td></tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32GS610</td> <td> 
+dsPIC33FJ64GS610</td></tr>
+</tbody></table>
+</p><p>The following <b>dsPIC33F MC </b>devices are supported:</p><p>
+<table cellpadding="3" frame="box" rules="cols">
+<tbody><tr> <th> 12K devices</th> <th> 16K devices</th> <th> 32K devices</th>
+ <th> 64K devices</th> <th>128K devices</th> <th>256K devices</th> 
+</tr> 
+<tr>  <td> dsPIC33FJ12MC201</td> <td></td>  <td></td>  <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td> dsPIC33FJ12MC202</td> <td></td>  <td> dsPIC33FJ32MC202</td> <td>
+ dsPIC33FJ64MC202</td> <td> dsPIC33FJ128MC202</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32MC204</td> <td> 
+dsPIC33FJ64MC204</td> <td> dsPIC33FJ128MC204</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td> dsPIC33FJ32MC302</td> <td></td>  <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td> dsPIC33FJ16MC304</td> <td> dsPIC33FJ32MC304</td> <td></td>
+  <td></td>  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC506[A]</td> <td>
+ dsPIC33FJ128MC506[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC508[A]</td> <td></td>
+  <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC510[A]</td> <td>
+ dsPIC33FJ128MC510[A]</td> <td> dsPIC33FJ256MC510[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC706[A]</td> <td>
+ dsPIC33FJ128MC706[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td></td>  <td> 
+dsPIC33FJ128MC708[A]</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC710[A]</td> <td>
+ dsPIC33FJ128MC710[A]</td> <td> dsPIC33FJ256MC710[A]</td></tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC802</td> <td> 
+dsPIC33FJ128MC802</td> <td></td> </tr>
+<tr>  <td></td>  <td></td>  <td></td>  <td> dsPIC33FJ64MC804</td> <td> 
+dsPIC33FJ128MC804</td> <td></td> </tr>
+</tbody></table>
+<!--  This is now commented out...
+
+  **************** GENERATED TABLE END
+-->
+
+
+</p><p>The following 'virtual' devices are supported:</p>
+<ul>
+<li>   generic-16bit - this device can be used to represent a generic
+                       core device (no peripherals of any kind)</li>
+</ul>
+
+<!--  This is now commented out...
+
+     (*) Support files such as header, include and gld files may 
+         have PS appended to the device ID. When invoking tools
+         from a command line, do not include PS as part of the CPU identifier.
+-->
+
+
+</span>
+<li class="Heading0"><h1><a name="Install">
+Installation and Upgrades
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<p>If using MPLAB IDE, be sure to install MPLAB IDE v8.10 or later
+   before installing these tools.</p>
+
+<p>To install the 16-bit Language Tools, perform the following steps:</p>
+<ol>
+<li> Locate the setup program on the compiler CD ROM. </li>
+<li> Run the setup program. </li>
+<li> Follow the directions on the screen. </li>
+<li> If the installation program indicates that it is necessary,
+     reboot your computer to complete the installation. </li>
+<li> When the installation is complete, verify that the executable
+     directory has been correctly added to your PATH (i.e., if you
+     chose to install the tools in the default directory,
+     c:\Program Files\Microchip\MPLAB C30, then ensure that
+     c:\Program Files\Microchip\MPLAB C30\bin has been added to your
+     PATH).
+     <p>From a DOS prompt, type: c:\&gt;PATH</p>
+ </li>
+</ol>
+
+<p>To verify installation, perform the following steps:</p>
+<ol>
+<li> At a DOS prompt, go to the examples directory (by default, it is
+     c:\Program Files\Microchip\MPLAB 
+C30\examples\MPLABC30_Getting_Started)</li>
+<li> Type: run_hello.bat</li>
+
+<li> If the tools are installed correctly, the output should show the
+     various steps in the compilation and execution process ending
+     with the text:
+
+     <p> Hello, world! </p> </li>
+</ol>
+
+<p>If you have previously installed a Student, Demo, or Lite version of 
+MPLAB C30 and you wish to upgrade your current installation there is no 
+need to re-run the installer unless you also wish to upgrade the 
+currently installed 
+product to the latest release.  Once you have obtained a valid license 
+key, 
+from <a 
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/www.microchipdirect.com">www.microchipdirect.com</a>
+ for example,
+simply execute the following command line:
+
+   </p><p></p><pre>pic30-lm -u<cite>licensekey</cite></pre><p></p>
+<p></p>
+
+
+
+</span>
+<li class="Heading0"><h1><a name="Document">
+16-bit Language Tools Documentation
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+  <p>The following documents pertain to the 16-bit C compiler, these may
+ be
+     installed as part of the full product or downloaded from 
+     <a href="http://www.microchip.com/c30">Microchip's Website</a>:</p>
+
+  <ul> 
+  <li><cite>MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs User's Guide
+  (DS51284)</cite></li>
+  <li><cite>MPLAB Assembler, Linker and Utilities for PIC24 MCUs and
+  dsPIC DSCs User's Guide (DS51317)</cite></li>
+  <li><cite>16-Bit Language Tools Libraries (DS51456)</cite></li>
+  <li><cite>16-Bit Language Tools Getting Started (DS70094)</cite></li>
+  </ul>
+
+  <p>We refer to these documents throughout this README in somewhat 
+familiar 
+     terms.</p>
+
+  <p>Updates to these manuals, that have not made it into (virtual) 
+print, can
+be found <a href="#DocUpdates">later in this README</a>.</p>
+
+  <p>In addition to these manuals, a set of HTML documentation
+     for peripheral and DSP libraries is also included.
+     This documentation covers all supported devices, even if only a 
+subset
+     product is installed.</p>
+
+</span>
+<li class="Heading0"><h1><a name="WhatsNew">
+What's New in this Release.
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<!--  template, rejig as necessary
+<h2>   vx.yy   </h2>
+-->
+<h2>   v3.22 </h2>
+
+   <p>v3.22 is a bug fix release.</p>
+
+<h2>   v3.21 </h2>
+
+   <p>v3.21 is primarily a bug fix release.  A great deal of effort has 
+been 
+spent restoring the DSP builtins to operational duty after many releases
+ of 
+issues.  This support is now much more stable.</p>
+
+   <p>We have fixed a number of issues that were introduced with v3.20 
+and the
+<tt>__eds__</tt> qualifier support.  Also with v3.20 the groundwork for
+tracking PSVPAG/DSRPAG usage so that we may better optimize (in a future
+ 
+release) writing to these SSRs caused a few regressions which have been 
+cleaned
+up.</p>
+
+   <p>A welcome new feature is faster single and double floating point. 
+ 
+Our original libraries were primarily created for small code size and 
+are not
+particularly fast.  The new libraries consume a little more FLASH but 
+are much
+faster - as usual there is always a trade-off.   These new libraries can
+ be
+linked in with a new command line option -fast-math.</p>
+
+
+<h2>   v3.20 </h2>
+
+<h3><u>       Assembler </u></h3>
+
+<ul>
+    <li>  <p>New section attributes for creating heap or stack
+             allocations in source code. For example:</p>
+<pre>  .section mystack,stack
+  .space 512
+
+  .section myheap,heap
+  .space 256
+</pre>
+
+          <p>The <tt>stack</tt> attribute defines a section type, and is
+             compatible with attribute modifiers <tt>address()</tt>
+             and <tt>align()</tt>.</p>
+
+          <p>The <tt>heap</tt> attribute defines a section type, and is
+             compatible with attribute modifiers <tt>address()</tt>,
+             <tt>xmemory</tt>, <tt>ymemory</tt>, and <tt>align()</tt>.</p>
+
+    </li><li>  <p>New section attribute <tt>eds</tt> for allocating 
+memory
+             in extended data space on some future devices. The
+             <tt>eds</tt> attribute modifies sections of type
+             <tt>bss</tt>, <tt>data</tt>, and <tt>persist</tt>.</p>
+
+    </li><li>  <p>New section attribute <tt>page</tt> to indicate that a
+             section must not cross a natural page boundary. It ensures
+             that a single setting of the page register is sufficient
+             to access the entire section.
+             The <tt>page</tt> attribute modifies sections of type
+             <tt>bss</tt>, <tt>data</tt>, <tt>persist</tt>, <tt>code</tt>,
+             <tt>psv</tt>, and <tt>eedata</tt>. In the case of
+             <tt>psv</tt>, the <tt>page</tt> attribute is redundant,
+             since by definition sections of type <tt>psv</tt> avoid
+             page boundaries.</p>
+
+    </li><li>  <p>New operator <tt>edspage()</tt> can be applied to 
+symbols
+             in data memory or program memory. It returns the page value
+             that can be used to make the object visible in the extended
+             data space window. <tt>edspage()</tt>
+             always returns a 10-bit result.</p>
+
+    </li><li>  <p>New operator <tt>edsoffset()</tt> can be applied to 
+symbols
+             in data memory or program memory. It returns a 16-bit
+             offset that can be used in combination with an object's
+             page value. For objects located in the first 32K of data
+             memory, <tt>edsoffset()</tt> returns
+             the object's true address. For all other objects, it
+             returns an address in the PSV or extended data space
+             window.</p>
+
+    </li><li>  <p>Feature preprocessor definitions which can be used to 
+identify
+             special properties of the different 16-bit devices.
+             Definitions such as <tt>__HAS_DSP</tt> can be tested by
+             assembler preprocessor directives. A complete list of
+             definitions may be found in chapter 5.9, "Predefined 
+Symbols",
+             in the Assembler manual.</p>
+</li></ul>  
+
+<h3><u>       Compiler </u></h3>
+
+<ul>
+    <li>  <p>Support for new memory space, <tt>space(eds)</tt>, which
+             represents all of RAM on any given device.</p>
+
+    </li><li>  <p>Support for a new access (type) qualifier <tt>__eds__</tt>
+ which
+             allows universal acccess to objects in a variety of 
+different
+             memory spaces.</p>
+
+    </li><li>  <p><tt>-mlarge-arrays</tt> which enables support for 
+arrays larger
+             than 32K.</p>
+
+    </li><li>  <p>Feature preprocessor definitions which can be used to 
+identify
+             special properties of the different 16-bit devices.</p>
+</li></ul>  
+
+<h3><u>       Libraries </u></h3>
+
+<ul>
+    <li>  <p>Libraries that support arrays larger than 32K.</p>
+<p></p>
+
+    </li><li>  <p>Improved integer IO peformance with %o %d %x format 
+specifiers.</p>
+</li></ul>
+
+<h3><u>       Linker </u></h3>
+
+<ul>
+    <li>  <p>The linker allocates variables in <tt>space(eds)</tt>
+             on any page where memory is available. However, the
+             linker will use extended RAM first, in order to preserve
+             memory for the stack.</p>
+
+    </li><li>  <p>New linker script commands specify startup files.
+             On some future devices <tt>PSVPAG</tt> is no longer used to
+             access constants stored in program memory. On such devices
+             the standard startup files can not be used. In order to
+             support multiple startup files, new commands
+             specify files appropriate for the target device.
+             For example:</p>
+
+<pre>  CRT0_STARTUP(crt0_standard.o)
+  CRT1_STARTUP(crt1_standard.o)
+</pre>
+
+          <p>These commands replace the <tt>EXTERN()</tt> commands
+          which previously appeared near the top of linker scripts.
+          See <a href="#Migration">Migration Issues</a> for more
+          information.
+ 
+    </p></li><li>  <p>Linker scripts are now pre-processed using the 
+standard
+             C pre-processor. Macros can be defined in the Build Options
+             dialog of MPLAB IDE.
+          </p>
+ 
+    </li><li>  <p>To accomodate future devices with extended data 
+memory,
+             the data initialization template
+             has been modified to encode page numbers. For more
+             information, see chapter 10.8, "Initialized Data", in
+             the Linker manual.</p>
+
+    </li><li>  <p>Object files now contain signatures for the purpose
+             of matching objects created with
+             different compiler options. In the current release,
+             objects loaded from libraries are selected to ensure
+             consistent setting of the <tt>-mlarge-arrays</tt>
+             option. Two new linker options have been added to
+             control this feature:</p>
+
+<pre>  --select-objects     Select library objects based on options (default)
+  --no-select-objects  Don't select library objects based on options
+</pre>
+
+</li></ul>
+
+<h2>   v3.12 </h2>
+
+<h3><u>       Linker </u></h3>
+
+<ul>
+  <li>
+  <p>  The memory usage report (which appears in the map file as well as
+       console output) has changed in two ways. First, sections marked
+       <tt>noload</tt> will now appear in the report, and will count 
+towards
+       the total memory used. In the unusual case where two noload 
+sections
+       have been declared at the same address, the total memory value 
+will
+       be distorted.</p>
+
+  <p>  Second, the Program Memory report will only show sections 
+actually
+       defined in memory region "program". Previously, the reset vector
+       and interrupt vector tables were included in this section of the
+       report. However, these sections are defined in separate memory
+       regions, and their appearance in the report can be confusing 
+since
+       these sections are not really part of the application code, which
+       is otherwise variable in size.</p>
+
+  <p>  To clarify the second change, headings in the usage report now 
+include
+       the origin and length as defined in the linker script. For 
+example:</p>
+
+<pre>  Program Memory  [Origin = 0x100, Length = 0x3ff00] 
+
+  section                    address   length (PC units)   length (bytes) (dec) 
+  -------                    -------   -----------------   -------------------- 
+  .text                        0x100               0x56e           0x825  (2085) 
+  .const                       0x66e                 0x6             0x9  (9) 
+  .dinit                       0x674                0x82            0xc3  (195) 
+  .text                        0x6f6                 0xa             0xf  (15) 
+  .isr                         0x700                 0x2             0x3  (3) 
+
+                       Total program memory used (bytes):          0x903  (2307) &lt;1% 
+</pre>
+  </li>
+</ul>
+
+<h3><u>       Disassembler </u></h3>
+
+<ul>
+  <li>
+  <p>  The disassembly listing generated by <tt>pic30-objdump</tt>
+       has been improved. Instead of representing the target address
+       of branch and <tt>DO</tt> instructions as a PC-relative
+       offset (using a "dot expression"), the absolute target address 
+will
+       be displayed. If a label at the target address can be identified,
+       it will be displayed also. For example, a previous listing:</p>
+
+<pre>  f8 ff 3a        bra       NZ, . + 0xFFFFFFF2
+  b8 ff 07        rcall     . + 0xFFFFFF72
+</pre>
+
+  <p>  is now displayed as:</p>
+
+<pre>  f8 ff 3a        bra       NZ, 0x4F4 &lt;.L26&gt;
+  b8 ff 07        rcall     0x46C &lt;_fclose&gt;
+</pre>
+  </li>
+
+</ul>
+
+<h2>   v3.11 (B)</h2>
+
+<p>    The license manager has been updated to support multiple student
+       editions (PIC24 and dsPIC), and to improve robustness.</p>
+       
+<p>    A customer can determine if this update has been installed
+       by examining the compiler version string. A version string is
+       displayed by executing the following command:
+</p><pre>       pic30-gcc --version</pre>
+<table>
+<tbody><tr><td>    The version string before update is: </td><td> <tt>(dsPIC30,
+ Microchip v3.11) (A)</tt></td></tr>
+
+<tr><td>    The version string after update is: </td><td> <tt>(dsPIC30, 
+Microchip v3.11) (B)</tt></td></tr>
+</tbody></table>
+       
+<h2>   v3.11 </h2>
+
+<p>    Support for erasing and programming Flash and EEPROM memory
+       in PIC24FxxKA devices has been added to the runtime libraries.
+       See <a href="#DocUpdates">Documentation Updates</a> for details.</p>
+       
+<p>    Additional software delay functions have been added for simple
+       delay loops specified in microseconds or milliseconds. The
+       implementation is dependant on a user-supplied macro that
+       represents the instruction clock frequency.
+       See <a href="#DocUpdates">Documentation Updates</a> for details.</p>
+       
+<p>    New functions are defined in <tt>libq.h</tt> for converting <tt>_Q16</tt>
+       fixed point fractional values to and from type <tt>float</tt>.
+       See <a href="#DocUpdates">Documentation Updates</a> for details.</p>
+       
+<p>    The default stack guard band has been increased from 8 to 16 
+bytes,
+       to adequately handle stack overflow exceptions that may occur 
+from
+       certain instruction sequences. The size of the guard band can
+       also be specified with a new linker option. See <a 
+href="#Migration">
+       Migration Issues</a> for details.</p>
+       
+<h2>   v3.10 (C) Support Update   </h2>
+
+<p>    This support update to version 3.10 includes updates to the 
+following
+       device files: <br>
+       dsPIC33FJ06GS101, dsPIC33FJ06GS102, dsPIC33FJ06GS202, 
+dsPIC33FJ16GS402,
+       dsPIC33FJ16GS404, dsPIC33FJ16GS502, and dsPIC33FJ16GS504
+
+
+</p><p>    A customer can determine if this update has been installed
+       by examining the C30 version string. A version string is
+       displayed by executing the following command:
+</p><pre>       pic30-gcc --version</pre>
+<table>
+<tbody><tr><td>    The version string before update is: </td><td> <tt>(dsPIC30,
+ Microchip v3.10) (B)</tt></td></tr>
+
+<tr><td>    The version string after update is: </td><td> <tt>(dsPIC30, 
+Microchip v3.10) (C)</tt></td></tr>
+</tbody></table>
+       
+<p>    See <a href="#Fixed">Fixed Issues</a> for additional updates.</p>
+
+
+<h2>   v3.10 (B) Support Update   </h2>
+
+<p>    This support update adds missing PIC24H support files.
+
+</p><p>    The license manager has been updated to better support
+       multiple license keys for PIC24 MCUs and dsPIC DSCs.
+       
+</p><p>    Library functions _write_flash16() and _write_flash24()
+       have been updated to conform with the Device ID errata
+       workaround for 33F and 24H devices.
+       
+</p><p>    A customer can determine if this update has been installed
+       by examining the C30 version string. A version string is
+       displayed by executing the following command:
+</p><pre>       pic30-gcc --version</pre>
+<table>
+<tbody><tr><td>    The version string before update is: </td><td> <tt>(dsPIC30,
+ Microchip v3.10) (A)</tt></td></tr>
+
+<tr><td>    The version string after update is: </td><td> <tt>(dsPIC30, 
+Microchip v3.10) (B)</tt></td></tr>
+</tbody></table>
+
+<h2>   v3.10 </h2>
+
+<p>    This version includes support for 5 new devices: PIC24F04KA201,
+       PIC24F08KA101,
+       PIC24F08KA102, PIC24F16KA101, and PIC24F16KA102.
+
+</p><p>    16-bit Language Tools now come in three flavours:
+       </p><ul>
+       <li> MPLAB C Compiler for PIC24 MCUs</li>
+       <li> MPLAB C Compiler for dsPIC DSCs</li>
+       <li> MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs</li>
+       </ul>
+
+<p>    A student edition is not available for the combined product.
+       Previously installed licenses are valid for the combined product.
+
+ </p><p>See <a href="#Migration">Migration Issues</a> for information
+       about how existing projects may be affected.</p>
+       
+<h3><u>       Assembler </u></h3>
+
+<ul>
+   <li> A new directive <tt>.memory</tt> can be used to define external
+       memory regions. Sections may be assigned to memory regions by
+       using the <tt>memory</tt> section attribute. See chapter 6 of
+       <cite>MPLAB Assembler, Linker and Utilities for PIC24 MCUs and
+       dsPIC DSCs User's Guide</cite>
+       for details.
+       </li>
+</ul>
+
+<h3><u>       Compiler </u></h3>
+
+<ul>
+   <li> New user defined memory spaces makes it easier to interface with
+       external memory devices through the PMP peripheral or other user
+       defined methods. See chapter 6 of
+       <cite>MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs User's Guide
+       </cite> for details.
+       </li>
+
+   <li> A new function attribute <tt>user_init</tt> is available to
+       designate initialization functions that should be called prior
+       to main(). Any number of such functions may be defined; the
+       order of execution will depend on link order. See chapter 2
+       of <cite>MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs User's 
+Guide
+       </cite> for details.
+       </li>
+
+   <li> __C30_VERSION__ has been pre-defined with a value of 310.
+       This macro can be used, in conjunction with standard preprocessor
+       comparison statements, to conditionally include or exclude source
+       code that depends upon specific compiler versions. 
+__C30_VERSION__
+       was introduced in v2.00, with a value of 200.
+       </li>
+
+</ul>
+
+<h3><u>       Linker </u></h3>
+
+<ul>
+   <li> Several improvements to the linker memory allocator, especially
+       with regards to absolute sections and psv sections. For example,
+       absolute sections may be defined in source code to reside at
+       any address. The sequential memory allocator will avoid absolute
+       sections, if necessary.
+       </li>
+
+   <li> The linker allocates external memory regions as defined in
+        C or assembly language. Each memory region includes a unique
+        address space into which sections may be allocated.
+        See chapter 10 of
+        <cite>MPLAB Assembler, Linker and Utilities for PIC24 MCUs and
+        dsPIC DSCs User's Guide</cite> for details.
+        </li>
+        
+   <li> The definition of output section <tt>.text</tt> in linker
+        scripts includes a new input
+        section named <tt>.user_init</tt>. This section is used by the
+        compiler to generate activation code for <tt>user_init</tt> 
+sections.
+        The expression <tt>*(.text)</tt>
+        has been removed, allowing application code to flow around
+        psv sections as necessary, instead of always being allocated
+        in a single large block. The new definition is:
+<pre>  .text :
+  {
+        *(.init);
+        *(.user_init);
+        *(.handle);
+        *(.libc) *(.libm) *(.libdsp);  /* keep together in this order */
+        *(.lib*);
+  } &gt;program
+</pre>        
+        </li>
+        
+   <li> The linker script command language supports a new command
+        <tt>OPTIONAL</tt> which is analogous to <tt>INPUT</tt>, except 
+that
+        no error occurs if the input file or library can not be found.
+        An exact input file may be specified, or an abbreviated
+        library file name with the -l prefix.
+   
+</li></ul>
+
+<h3><u>       Libraries </u></h3>
+
+<ul>
+   <li> A fixed point fractional math library has been added. It 
+supports
+       common functions in signed 0.15 and 15.16 formats. See chapter 5
+       of the 16-Bit Language Tools Libraries manual for details.
+       </li>
+
+   <li> The standard linker scripts include device-specific libraries
+       automatically. It is no longer necessary to add peripheral
+       libraries to the project manually.
+       </li>
+</ul>
+
+
+
+</span>
+<li class="Heading0"><h1><a name="Migration">
+Migration Issues
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<h3><u>       Migrating to Version 3.21 </u></h3>
+
+  Some modifications have been made to the calling convention of the DSP
+ 
+builtin routines.  This to provide the compiler with the extra data flow
+information to properly support the builtins and has been a concentrated
+ effort
+for v3.21.  Unfortunately this has meant some prototype changes, which 
+is
+reflected in the current documentation for the builtins (found in the 
+compiler
+user's guide).
+
+  If you have old code, the compiler will provide error messages if the
+prototypes have changed.  If you need to support multiple versions of 
+the
+compiler, do not forget about the <tt>__C30_VERSION__</tt> manifest 
+constant
+which may be used to version protect code changes:
+
+<pre>#if __C30_VERSION__ &lt; 321
+  A = __builtin_addab(A,B);
+#else
+  A = __builtin_addab();
+#endif
+</pre>
+
+<h3><u>       Migrating to Version 3.20 </u></h3>
+ 
+  <p>Linker scripts provided with v3.20 include new commands
+     to specify start-up files for the target device. If these
+     commands are not found, the linker will select default
+     versions. Existing projects with custom linker
+     scripts will function correctly for all current
+     devices. However, the following warning messages may
+     be displayed:</p>
+
+<pre>  Warning: linker script did not specify CRT0_STARTUP file, default for this device: crt0_standard.o 
+  Warning: linker script did not specify CRT1_STARTUP file, default for this device: crt1_standard.o 
+</pre>
+
+  <p>To quiet these warnings, replace the two <tt>EXTERN()</tt>
+     commands near the top of the linker script with:</p>
+
+<pre>  CRT0_STARTUP(crt0_standard.o)
+  CRT1_STARTUP(crt1_standard.o)
+</pre>
+
+  <p>The <tt>tblpage()</tt> operator now returns a value with bit
+     8 set, even though the <tt>TBLPAG</tt> register implements
+     bits 0-7 only. The extra bit allows for
+     better code generation by the compiler. Existing projects
+     should not be affected by this change, unless an assembly
+     source file uses the <tt>tblpage()</tt> operator with
+     a <tt>mov.b</tt> instruction. In that case, a "relocation
+     truncated to fit" error may be reported. To resolve this
+     problem, revise the assembly source to use a word sized
+     instruction.</p>
+
+  <p>When the <tt>psvpage()</tt> operator is used with future
+     devices that support extended data memory, a 10-bit value
+     is returned. Assembly source files that use the <tt>psvpage()</tt>
+     operator with a <tt>mov.b</tt> instruction should be modified
+     to use a word sized instruction.
+
+  </p><p>The C-runtime startup has been enhanced to support data
+     initialization outside of the standard 32K data memory range.
+     There are no migration issues for customers using devices
+     released with prior versions of the tool chain. However,
+     if you have included customized versions of the startup files
+     you may wish to apply those enhancements for future devices.
+     For more information, look in files <tt>crt0_standard.s</tt> and
+     <tt>crt0_extended.s</tt>, which are contained within
+     the libpic30 archive.</p>
+
+  <p>Because of changes to the startup file architecture, it is
+     no longer possible to load a library startup module by
+     calling <tt>__reset</tt>. If a custom startup file needs
+     to invoke the standard startup file, copy <tt>crt0_standard.s</tt>
+     to the project.
+
+</p><h3><u>       Migrating to Version 3.12 </u></h3>
+
+  <p>No significant migration issues have been identified. However,
+     the format of link map files and disassembly listings has
+     changed slightly (see <a href="#WhatsNew">What's New</a>
+     for details.)
+     Custom tools or scripts which post-process such files may
+     need modifications to accomodate these changes.</p>
+
+<h3><u>       Migrating to Version 3.11 </u></h3>
+
+  <p>The definition of symbol <tt>USE_AND_OR</tt> in Generic.h has been 
+removed.
+     This symbol affects the way that configuration constants are
+     passed to PIC24F peripheral libraries. When this symbol is defined,
+     constants are assembled using the bit-wise OR operator (|) to set
+     values and bit-wise AND (&amp;) masks to clear values. This symbol 
+was
+     defined in v3.10, but not in any other version. To select the
+     mode described here, and revert to v3.10 behavior, define this 
+symbol
+     on the command line with <tt>-DUSE_AND_OR</tt> or in source
+     code with <tt>#define USE_AND_OR</tt></p><p>
+     
+  </p><p>The default stack guard band has been increased from 8 to 16 
+bytes.
+     This results in a corresponding decrease of usable stack space
+     available to applications. To faciltiate the recovery of lost
+     stack space, or to specify a larger guard band for non-trivial
+     exception handlers, a new linker option has been added.
+     For example, to restore stack allocation to match previous 
+versions:</p>
+<pre>     --stackguard=8
+</pre>
+  <p>Applications that need to manage the stack can reference global 
+symbols
+     created by the linker.
+     For example, to report the default stack allocation:</p>
+<pre>     #include "stdio.h"    /* should use &lt;&gt; here */
+     extern int _SP_init;
+     extern int _SPLIM_init;
+     extern int _STACKGUARD_SIZE;
+
+     int main()
+     {
+       printf("First stack location is 0x%x\n", &amp;_SP_init);
+       printf("Last stack location is 0x%x\n",
+              (int)&amp;_SPLIM_init + (int)&amp;_STACKGUARD_SIZE - 2);
+     }
+</pre>
+     
+<h3><u>       Migrating to Version 3.10 </u></h3>
+
+<ul>
+<li>
+<h2> Installation Directory has been Re-organized</h2>
+
+  <p>The installation directory structure has changed to
+     support multiple product configurations. The most significant
+     change is that device support files (such as header files,
+     include files, and linker scripts) have been organized into
+     folders based on product family. For example, all device-specific
+     header files were previously located in <tt>MPLAB C30\support\h</tt>.
+     Now they may be found in <tt>MPLAB C30\support\PIC24F\h</tt>
+     for 24F devices or <tt>MPLAB C30\support\dsPIC33F\h</tt> for 33F
+     devices, etc.</p>
+     
+  <p>MPLAB IDE will report "File not found" for support files referenced
+     by projects in the old locations. MPLAB IDE v8.10 or later provides
+     an easy way to resolve such problems. Simply right-click on the
+     missing project files and select "Locate Missing File" or "Remove".
+     In most cases MPLAB IDE will locate the missing project file
+     automatically. If the missing file is a standard linker script,
+     then removing the file will suffice, since standard linker
+     scripts are included automatically in MPLAB IDE v8.0 or later.
+     If the missing file is a
+     device-specific library, then removing the file will also suffice,
+     since standard linker scripts now include peripheral libraries
+     automatically.</p>
+     
+  <p>The <tt>bin</tt> folder has also changed. Tools that are specific
+     to the object file format have been moved to a lower level. This
+     change should not impact existing projects, since these tools
+     should always be invoked by the generic versions which are located
+     in the standard location.
+     
+
+
+</p></li><li>
+<h2> Memory Map has been Simplified</h2>
+
+  <p>The linker's best-fit allocator will merge output sections
+     with the same name whenever it is convenient to do so. This will
+     change the memory usage report and link map. For example, several
+     adjacent sections named <tt>.bss</tt> will now be merged into one.</p>
+     
+  <p>Section <tt>.text</tt> will flow around section <tt>.const</tt>
+     (or other psv sections) as necessary. To facilitate this new 
+behaviour,
+     the expression <tt>*(.text)</tt> has been removed from the 
+definition
+     of output section <tt>.text</tt> in linker scripts. This may change
+     the organization of sections in program memory, since <tt>.text</tt>
+     will now be allocated in multiple chunks if necessary. Existing
+     projects which depend on a single <tt>.text</tt> section can revert
+     to the previous behaviour by restoring the definition of output
+     section <tt>.text</tt>.</p>
+</li>
+
+</ul>
+
+
+
+</span>
+<li class="Heading0"><h1>
+<a name="DocUpdates">
+Documentation Updates
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<ul>
+
+   <li>Several new functions are defined in libpic30.a
+   for erasing and writing to EEDATA memory on PIC24FxxKA devices. 
+Similar
+   functions for dsPIC30F devices are documented in chapter 4.6
+   of the libraries manual.
+   
+   <ul>
+   <li><tt>void _erase_eedata(_prog_addressT dst, int len)</tt>
+     <p>erases EEDATA memory.
+     The length may be <tt>_EE_WORD</tt>, <tt>_EE_4WORDS</tt>,
+     or <tt>_EE_8WORDS</tt>.</p>
+   </li>
+
+   <li><tt>void _erase_eedata_all(void)</tt>
+     <p>erases the entire range of EEDATA memory.</p>
+   </li>
+   
+   <li><tt>void _wait_eedata(void)</tt>
+     <p>waits for an erase or write operation to complete.</p>
+   </li>
+   
+   <li><tt>void _write_eedata_word(_prog_addressT dst, int dat)</tt>
+     <p>writes 16 bits of EEDATA memory.</p>
+   </li>
+
+   </ul>
+    <p>Example:</p>
+    <pre>     #include "libpic30.h"  /* should use &lt;&gt; here */
+     #include "p24Fxxxx.h"
+
+     int  __attribute__((space(eedata), aligned(_EE_4WORDS))) dat[_EE_4WORDS/2];
+
+     int main()
+     {
+       _prog_addressT p;
+
+       _init_prog_address(p, dat);      /* get address in program space */
+       _erase_eedata(p, _EE_4WORDS);    /* erase the dat[] array */
+       _wait_eedata();                  /* wait to complete */
+       _write_eedata_word(p, 0x1234);   /* write a word to dat[0] */
+       _wait_eedata();
+  
+       p += 2;
+       _write_eedata_word(p, 0x5678);   /* write a word to dat[1] */
+       _wait_eedata();
+     }
+</pre>
+
+   </li>
+   
+   <li>Several new functions are defined in libpic30.a
+   for erasing and writing to FLASH memory on PIC24FxxKA devices.
+   Similar functions for the other device families are documented
+   in the chapter 4.7 of the libraries manual.
+   
+   <ul>
+   <li><tt>void _erase_flash(_prog_addressT dst, int len)</tt>
+     <p>erases rows of FLASH memory. The length may be <tt>_FLASH_ROW</tt>,
+     <tt>_FLASH_2ROWS</tt>, or <tt>_FLASH_4ROWS</tt>.</p>
+   </li>
+
+   <li><tt>void _write_flash16(_prog_addressT dst, int *src)</tt>
+     <p>writes a row of FLASH memory with 16-bit data. The length
+     of a row is <tt>_FLASH_ROW</tt> words (1 word = 3 bytes = 2 PC 
+address units.)
+     The upper byte of each destination
+     word is filled with 0xFF. Note that the row must be
+     erased before any write can be successful.</p>
+   </li>
+   
+   <li><tt>void _write_flash24(_prog_addressT dst, long *src)</tt>
+     <p>writes a row of FLASH memory with 24-bit data. The length
+     of a row is <tt>_FLASH_ROW</tt> words. Note that the row must be
+     erased before any write can be successful.</p>
+   </li>
+   
+   </ul>
+    <p>Example:</p>
+    <pre>     #include "libpic30.h"  /* should use &lt;&gt; here */
+     #include "p24Fxxxx.h"
+
+     int __attribute__((space(prog),aligned(_FLASH_2ROWS*2))) dat[_FLASH_2ROWS];
+
+     int main()
+     {
+       int i;
+       int   source1[_FLASH_ROW];
+       long  source2[_FLASH_ROW];
+       _prog_addressT p;
+
+       for (i = 0; i &lt; _FLASH_ROW; ) {
+         source1[i] = i;
+         source2[i] = i++;
+       }
+
+       _init_prog_address(p, dat);     /* get address in program space */
+       _erase_flash(p, _FLASH_2ROWS);  /* erase two rows */
+
+       _write_flash16(p, source1);     /* write first row with 16-bit data */
+       p += (_FLASH_ROW * 2);          /* advance to next row */
+  
+       _write_flash24(p, source2);     /* write second row with 24-bit data */
+     }
+    </pre>
+    
+</li>
+   
+   <li><p>Two new software delay functions are defined in <tt>libpic30.h</tt>,
+   for delay periods specified in microseconds or milliseconds.
+   The implementation of these functions depends on a user-supplied 
+macro
+   <tt>FCY</tt>, which represents the instruction clock frequency. If
+   <tt>FCY</tt> is defined, the argument is converted and passed to the
+   cycle-accurate delay function <tt>__delay32()</tt>. If <tt>FCY</tt> 
+is
+   not defined, the functions are declared external. For example, to
+   define <tt>FCY</tt> for a 1.0 MHz instruction rate:</p>
+<pre>     #define FCY 1000000UL
+     #include "libpic30.h"  /* should use &lt;&gt; here */
+
+     int main()
+     {
+       __delay_ms(1);       /* at 1 MHz, these are equivalent */
+       __delay_us(1000);
+       __delay32(1000);
+     }
+</pre>
+   </li>
+   
+   <li><p>Functions for converting between <tt>_Q16</tt> fixed point 
+fractional
+   and <tt>float</tt> have been added to <tt>libq.h</tt>. For example:
+</p><pre>     #include "libq.h"  /* should use &lt;&gt; here */
+     #include "stdio.h"
+
+     int main()
+     {
+       _Q16 q;
+       float f;
+
+       q = _Q16ftoi(3.14159);
+       f = _itofQ16(q);
+       printf("3.14159 = %.5f\n", f);
+     }
+</pre>
+   </li>
+   
+   <li><p>The description of the <tt>packed</tt> attribute in chapter
+   2.3.1, "Specifying Attributes of Variables", of the compiler
+   manual is misleading. It should read:</p>
+   
+   <p>The <tt>packed</tt> attribute specifies that a structure member 
+should
+   have the smallest possible alignment unless you specify a larger 
+value
+   with the <tt>aligned</tt> attribute.
+   
+   
+   </p></li><li><p>The example in chapter 4.7 of the libraries manual 
+includes
+   a source construct that is no longer supported:</p>
+<pre>      p.next  += (_FLASH_ROW * 2);  /* not supported */
+      p += (_FLASH_ROW * 2);        /* correct */
+</pre>
+   </li>
+   
+   <li><p>The built-in function <tt>__builtin_tbladdress()</tt> 
+   returns an <tt>unsigned long</tt> value that represents the address
+   of an object in program memory.</p>
+   </li>
+
+   <li><p>The compiler command line option <tt>-mfillupper</tt> can be
+   used to specify the upper byte of variables stored into <tt>space(prog)</tt>
+   sections. The <tt>fillupper</tt> attribute will perform the same
+   function on individual variables.</p>
+   </li>
+   
+   <li><p>The description of library function <tt>__delay32()</tt> 
+should
+   reflect a 12 cycle minimum, as follows:</p>
+   
+   <p>This function will effect a delay of the requested number of 
+cycles.
+    The minimum supported delay is 12 cycles (an argument of less than 
+or
+    equal to 12 will result in 12 cycles). The delay includes the call 
+and
+    return statements, but not any cycles required to set up the 
+argument
+    (typically this would be two for a literal value).</p>
+   </li>
+</ul>
+
+
+
+<li class="Heading0"><h1><a name="Fixed">
+Fixed Issues
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<!-- template  cut-n-paste and re-jig
+<h2>   vx.yy  </h2>
+<ul>
+<h3><u>     Assembler </u></h3>
+  <li> SSR## - short detail 
+ 
+           <p>optional long detail</p>
+           </li>
+<h3><u>     Compiler </u></h3>
+<h3><u>     Linker </u></h3>
+</ul>
+-->
+
+<h2>   v3.22  </h2>
+<ul>
+<h3><u>     Compiler </u></h3>
+
+<li>  C30-917 ICE in copy_to_mode_reg for the TCP/IP stack </li>
+<li>  C30-921 ICE in gen_reg_rtx </li>
+<li>  C30-925 Unable to find register in spill class 'SINK' </li>
+<li>  C30-926 ICE in subreg_regno_offset </li>
+
+<h3><u>     Support Files </u></h3>
+
+<li>  C30-918 PPS.h has a missing definition </li><li>
+
+</li></ul>
+
+<h2>   v3.21  </h2>
+<ul>
+<h3><u>     Assembler/Linker or other binary utilities </u></h3>
+
+<li>  BIN30-168 - Boot/secure segment size options do not accept hex 
+values</li>
+<li>  BIN30-174 - Specifying a negative value for stack size does not 
+emit diagnostic</li>
+<li>  BIN30-182 - Assembler creates invalid extended attribute symbol </li>
+
+<h3><u>     Compiler </u></h3>
+
+<li>  C30-354 - Error message incorrect for __builtin_sac </li>
+<li>  C30-507 - ICE in gimplify_expr when using asm register variables</li>
+<li>  C30-512 - Error message improved when trying to use Accumulator 
+variables
+                without first using __builtin_sac to extract them</li>
+<li>  C30-655 - ICE using __bultin_add with negatvie parameter</li>
+<li>  C30-774 - ICE using __builtin_ed</li>
+<li>  C30-775 - Incorrect instruction generated for __builtin_edac</li>
+<li>  C30-777 - ICE using __builtin_mpy</li>
+<li>  C30-781 - ICEs using various DSP builtins</li>
+<li>  C30-796 - Sinusoidal DSCD demo code fails to build</li>
+<li>  C30-835 - ICE in gimplify_expr</li>
+<li>  C30-838 - const Tau * const pointer derefences broken (USB stack)</li>
+<li>  C30-842 - Do not dperecate __DMA_BASE</li>
+<li>  C30-844 - EDS pointer arithmetic does not overflow properly when 
+offset
+                is greater than 0xFFFF</li>
+<li>  C30-845 - Search the current path first for linker scripts when 
+                pre-processing linker scripts</li>
+<li>  C30-846 - -merrata=exch can generate code that over-writes the 
+pointer we
+                are about to dereference</li>
+<li>  C30-847 - -merrata=exch causes illegal instruction to be generated</li>
+<li>  C30-848 - Bad code generated, a mov instruction is generated for 
+some
+                file scope char sized objects instead of mov.b resulting
+ in an
+                assembler error</li>
+<li>  C30-849 - Storing an auto_psv variable into a far static variable 
+can
+                cause an ICE</li>
+<li>  C30-853 - ICE reading from a PSV array</li>
+<li>  C30-855 - Invalid assembly instruction generated for some forms of
+ char
+                sized moves</li>
+<li>  C30-868 - ICE in extract_insn when using __psv__ type qualifier 
+for
+                variable in space(auto_psv)</li>
+<li>  C30-876 - ICE in realod_cse_simplify_operands</li>
+<li>  C30-877 - Compiler generated memset generates incorrect code for 
+word
+                set of odd-sized array</li>
+<li>  C30-886 - W14 can be clobered by inline assembly statements</li>
+<li>  C30-915 - ICE when copying auto PSV string to auto stack variable</li>
+<li>  C30-916 - Volatility of char variables not always respected</li>
+
+<h3><u>   Support Files </u></h3>
+
+<li>  C30-843 - SFRs for PWM9 missing in support files for 33FJxxGS 
+devices</li>
+<li>  C30-865 - Support file ambiguities in the 33F64GAxxx &amp; 
+33F32GAxxx devices
+                </li>
+<li>  C30-906 - Address of SFR QEI2CON for several 33FGSxxxx and 
+3364GSxxxx
+                devices</li>
+<li>  C30-910 - Error in pps.h for PIC24FJ32GB002
+
+</li></ul>
+
+<h2>   v3.20  </h2>
+<ul>
+<h3><u>     Assembler/Linker or other binary utilities </u></h3>
+<li>  BIN30-145 - ELF linker error with assembly .equ directive </li>
+<li>  BIN30-156 - Attributes for input section '.boot' conflict with 
+output
+                  section '.boot_const</li>
+<li>  BIN30-157 - ASSERT() in linker script may cause crash</li>
+<li>  BIN30-158 - Assembler should not limit the range of address()</li>
+<li>  BIN30-159 - __PROGRAM_END symbol should not inlcude config words</li>
+<li>  BIN30-160 - TRIG1bits is missing from 30F2010 linker script</li>
+<li>  BIN30-163 - relocation truncacted to fit: WORD _const_psvpage</li>
+<li>  BIN30-164 - data memory sections may overlap</li>
+<li>  BIN30-165 - Declaring a stack with 64 bytes of sapce emits error</li>
+<li>  BIN30-166 - Linker script does not match datasheet for 
+PIC24F04KA200 and
+                  PIC24F04KA201 devices</li>
+<li>  C30-664,  
+</li><li>  C30-667 - INC file ambiguities for 33FJ64GS and 33FJ32GS 
+devices</li>
+<li>  C30-665 - GLD file ambiguities for 33FJ64GS and 33FJ32GS devices</li>
+<li>  C30-673 - Ambiguities in inc files for PIC24F64GB004 family 
+devices</li>
+<li>  C30-699 - Contradictory definitions of AD1PCFGH in PIC24FJ256GAxxx
+ 
+                inc fles</li>
+<li>  C30-744 - Errors in P30F6015.inc</li>
+
+<h3><u>     Compiler </u></h3>
+<li>  C30-270 - Internal Compiler Error (ICE) when using register 
+variables
+                as index</li>
+<li>  C30-370 - FUID entries cannot be read without defining</li>
+<li>  C30-374 - ICE with asm variables</li>
+<li>  C30-376 - Invalid References to TRISG4/5 PORTG,LATG and ODCG in 
+header 
+                file for PIC24FJ128GA006</li>
+<li>  C30-492 - PIC24F I2C library help file requires corrections</li>
+<li>  C30-542 - PIC29 is not a valid SFR for dsPIC33FJ06GS202</li>
+<li>  C30-555 - SLEEP_MODE and IDLE_MODE constants missing in include 
+files</li>
+<li>  C30-562 - Unsigned bitfields sign extend instead of zero extend
+ 
+      <p>This was incorrectly ?fixed? in v3.12 due to a mis-read of the 
+         standard.  Unsigned bitfields should sign extend.  The previous
+         behaviour has been restored.</p></li>
+<li>  C30-587 - A typecast to pointer and dereference may fail to build</li>
+<li>  C30-600 - Epilogue not generated for boot/secure functions with 
+multiple
+                exit points</li>
+<li>  C30-601 - ICE in gimplify_expr</li>
+<li>  C30-614 - Error in Timer.h for EnableIntT1</li>
+<li>  C30-621 - ICE using named register variables that become loop 
+invariant
+                </li>
+<li>  C30-643 - Remove COE bit from all header files</li>
+<li>  C30-651 - array of __psv__ qualified data should in RAM</li>
+<li>  C30-653 - Peephole optimization error with mov #handle(fn),x; mov 
+x,y
+</li><li>  C30-669 - RP0-RP14 missing from appropriate PIC24F devices</li>
+<li>  C30-672 - Ambiguities in header files for PIC24F64GB004 family 
+                devices</li>
+<li>  C30-675 - Compiler generates illigal long int compare instructions
+                at certain optimization levels</li>
+<li>  C30-677 - PORTA should not be available on PIC24FxxGA006 devices</li>
+
+</ul>
+
+<h2>   v3.12  </h2>
+<ul>
+<h3><u>     Assembler </u></h3>
+<li>  BIN30-148 - Assembler rejects psv section defined twice with 
+absolute address</li>
+<li>  BIN30-149 - error with _FBS macro on dsPIC33FxxGS devices</li>
+
+<h3><u>     Compiler </u></h3>
+<li>  C30-543 - Internal Compiler Error (ICE) copying structures using 
+managed PSV</li>
+<li>  C30-549 - Value of variable in PSV space is incorrect</li>
+<li>  C30-552 - ICE when using __pmp__ type qualifier on non PMP device</li>
+<li>  C30-562 - Unsigned bitfields sign extend instead of zero extend</li>
+<li>  C30-564 - Inline assembly should not be disturbed by PA</li>
+<li>  C30-566 - Builtin mempcy() does not properly restore the pointer 
+registers</li>
+<li>  C30-569 - License manager reports command line error when in fact 
+an unlicensed device has been specified</li>
+<li>  C30-571 - Invalid instruction 'move' generated</li>
+<li>  C30-575 - Vista only; temporary file names returned by the OS are 
+not user-writable by default - work around the issue</li>
+<li>  C30-578 - Unrecognizable internal instruction generated 
+unoptimized</li>
+
+<h3><u>     Disassembler </u></h3>
+
+<li>  BIN30-153 - pic30-objdump (-d option) may display same label at 
+two addresses</li>
+            
+<h3><u>     Libraries &amp; Support Files </u></h3>
+
+<li>  C30-554 - NVMCON values for _erase_eedata invalid for some PIC24F 
+devices</li><li>
+</li><li>  C30-559 - makelib.bat for libpic30.a requires a dsPIC 
+compiler to rebuild the library</li>
+<li>  C30-560 - Create p30sim.h to go with p30sim.gld</li>
+<li>  C30-588 - _div3216 and _udiv3216 are not always accurate</li>
+<li>  C30-628 - _Q15neg() mis-named as _Q15neq()
+
+     <p>Spelling corrected and old name deprecated.</p>
+
+<h3><u>     Linker </u></h3>
+
+</li><li>  BIN30-123 - Memory usage report does not include "noload" 
+sections but the map file does</li>
+<li>  BIN30-137 - Percent used calculation in program memory is slightly
+ inaccurate for non-30F devices</li>
+<li>  BIN30-146 - "noload" sections do not appear in the memory usage 
+report</li>
+<li>  BIN30-147 - Linker should warn if absolute section crosses a 
+region boundary</li>
+<li>  BIN30-150 - Linker option "boot=no_write_protect" is rejected for 
+all devices</li>
+
+</ul>
+            
+<h2>   v3.11 </h2>
+<ul>
+<h3><u>     Compiler </u></h3>
+<li>  C30-478 - Incorrect code generated for certain combinations of 
+&amp; and |
+                operators</li>
+<li>  C30-481 - PMP declaration generates spurious warnings with -Wall</li>
+<li>  C30-483 - External memory space passed incorrectly when accessed 
+via pointer</li><li>
+</li><li>  C30-486 - Incorrect assembly generated for:
+                <tt> A |= 0x8000000UL;</tt></li>
+<li>  C30-490 - Internal compiler error in change_address_1</li>
+<li>  C30-494 - Writing to an external array can cause a crash</li>
+<li>  C30-498 - Add support for 24F..KA eedata memory to library 
+functions</li>
+<li>  C30-497 - PA tool does not support .pushsection</li>
+<li>  C30-510 - Invalid instruction generation
+  <p> The compiler occasionally would generate an invalid instruction 
+form.</p></li>
+
+<li>  C30-513 - Internal compiler error during optimization of external 
+                pointers</li>
+<li>  C30-519 - Compiler should reject external memory definition wwith 
+odd origin</li>
+<li>  C30-522 - Managed PSV initializer not in same section as it needs 
+to be</li>
+<li>  C30-523 - Interrupt functions can overwrite saved value of W14</li>
+  <p> This error applies only to interrupt service routines. This could 
+cause 
+      an _AddressError trap or a reset.  Valid work-arounds (if not 
+applying 
+      this patch) are to use -fno-omit-framepointer or use no_auto_psv 
+with 
+      interrupt functions.</p>
+<li>  C30-530 - Bit 11 of CONFIG2 not maintained as "0" for 24FJ256GB110
+ family</li>
+<li>  C30-535 - Remove references to redundant devices in generic 
+support files</li>
+<li>  C30-546 - Invalid conditional branch generated</li>
+<li>  C30-553 - USE_AND_OR macro in Generic.h should be commented out
+  <p> This macro affects the way that configuration constants
+      are passed to PIC24F peripheral library functions. The definition
+      of this macro in Generic.h caused problems with some example 
+projects.
+      The definition has been replaced by a comment block that explains
+      the intended use of this macro, but leaves it undefined.</p></li>
+
+<h3><u>     Libraries </u></h3>
+<li>  C30-505 - malloc() fails even though there is enough heap 
+available</li>
+
+<h3><u>     Linker </u></h3>
+<li>  BIN30-141 - Stack overflow guard band is not large enough</li>
+<li>  BIN30-142 - Can't create maximum size auto_psv section</li>
+<li>  BIN30-143 - arrays larger than 16K are not cleared at startup</li>
+
+</ul>
+
+<h2>   v3.10 (C) </h2>
+<ul>
+<h3><u>     Libraries </u></h3>
+<li>  C30-493 - The Peripheral Library Help Files needs correction. </li>
+
+<li>  C30-489 - In delay.h, obsolete Delay function definitions should 
+be 
+      removed. </li>
+
+<li>  C30-488 - fix #define issue in delay.h </li>
+
+<li>  C30-487 - Peripheral include files (timer.h and dma.h) for the 30f
+ 33f &amp; 
+      24h need correction. </li>
+
+<li>  C30-430 - Error in ECAN documentation. </li>
+
+<li>  C30-422 - Arguments for OpenSPI1() &amp; OpenSPI2() are not 
+consistent in 
+      the peripheral file &amp; the help file. </li>
+
+<li>  C30-406 - UART library header-file error for 
+dsPIC30F1010/2020/2023 
+      devices. </li>
+
+</ul>
+
+
+<h2>   v3.10 (B) </h2>
+<ul>
+<h3><u>     Libraries </u></h3>
+<li>  C30-484 - _flash_write*() functions in libpic30 need Device ID
+             errata work-around</li>
+</ul>
+
+
+<h2>   v3.10  </h2>
+<ul>
+<h3><u>     Assembler </u></h3>
+<li>  BIN30-119 - ELF/DWARF: can't debug multiple sections in assembly
+</li><li>  BIN30-118 - need better error checking for DSP square and 
+accumulate
+
+<h3><u>     Compiler </u></h3>
+
+</li><li>  C30-211 - error in timer3 controls (timer.h) for PIC24F</li>
+<li>  C30-238 - Improved performance of udivmoddi</li>
+<li>  C30-324 - port.h support file does not inlcude <tt>PORTG</tt>, 
+                applicable to 100 pin PIC24F devices</li>
+<li>  C30-345 - Transparent union attribute broken</li>
+<li>  C30-351 - Internal compiler error</li>
+<li>  C30-353 - String constants in named PSV sections are duplicated in
+                the .const section</li>
+<li>  C30-355 - Needless stack space used when passing structs</li>
+<li>  C30-357 - Various improvements to comparitor.h</li>
+<li>  C30-362 - Unrecognizable instruction when using managed PSV</li>
+<li>  C30-379 - Ambiguities in support files for devices 33FJ32MC204 / 
+                33FJ32MC202 / 33FJ16MC304</li>
+<li>  C30-380 - 33FJ MC Devices Support files don't match Datasheet</li>
+<li>  C30-381 - Support Files for 33FJ GP Devices don't match the 
+Datasheet 
+                </li>
+<li>  C30-382 - 24HJ GP Device support files have ambiguities </li>
+<li>  C30-383 - Ambiguities in the support files for 24HJ GP Devices </li>
+<li>  C30-384 - There are ambiguities in the Support files for PIC24FJ 
+devices 
+                as against the datasheet </li>
+<li>  C30-387 - Aliases in support files for Config macros cause errors 
+on
+                project build
+</li><li>  C30-397 - CNPU1 register address in dsPIC30F1010/202x devices
+ files need 
+                to be corrected to 0x0068 to reflect silicon 
+implementation. </li>
+<li>  C30-405 - Graphics Primitive Layer Demo fails to build with 
+optimization</li>
+<li>  C30-411 - C library uses too much near data space
+                <p>We now compile this library with large data model</p></li>
+
+<li>  C30-420 - __builtin_divmodxx confuses optimizer</li>
+<li>  C30-422 - Arguments to OpenSPI[12]() do not match docs</li>
+<li>  C30-478 - Incorrect code generaed</li>
+
+<h3><u>     Linker </u></h3>
+
+<li>  BIN30-30/25966 - Functions with the address attribute may cause a 
+link
+             error.
+             
+             <p>Previously, some addresses were invalid for the address
+             attribute, notably those that are used for the .handle,
+             .libc, .libm, .libdsp and other .lib sections. Sequential
+             sections will now avoid functions with the address
+             attribute.</p></li>
+             
+<li> BIN30-77 - Not enough contiguous memory for section .const.
+
+            <p>Previously, applications with large amounts
+            of auto_psv data could fail to link on certain devices,
+            even though the total amount of memory used did not
+            exceed the flash capacity.
+            The new linker does a better job of allocating psv
+            sections, including section <tt>.const</tt>. Also, input
+            sections <tt>.text</tt> have been removed from linker 
+scripts,
+            allowing the best-fit allocator to flow them around psv
+            sections as necessary.
+            </p></li>
+
+<li>  BIN30-127 - Not enough memory for heap, when upgrading from 2.30 
+to 3.02</li>
+            <p>In v3.0x, variables with an alignment requirement larger 
+than
+            their size consumed additional memory. This has been 
+corrected.
+            </p><p>
+
+</p><li>  BIN30-115 - Linker rejects FGS settings for certain devices
+</li><li>  BIN30-117 - Invalid Config bit warning seen when building a 
+project with FGS settings
+
+<h3><u>     Libraries </u></h3>
+</li><li>  C30-375 - Odd return value for PIC24F SPI library</li>
+
+<h3><u>     Documentation </u></h3>
+<li>  C30-294 - Improve documentation regarding structure arguments</li>
+</ul>
+
+</span>
+<li class="Heading0"><h1><a name="Limitations">
+Limitations
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+   The current limitations are as follows:
+<ul>
+
+<h3><u>   Assembler </u></h3>
+
+
+<li>  Arguments to the address() section attribute must be even.</li>
+
+<li>  The default section alignment is 2**1. Therefore the minimum
+     section length is 2 bytes in data memory, and 2 PC units
+     (3 bytes) in program memory.</li>
+
+<li>  BIN30-3/15741 - The .lcomm directive causes incorrect source line 
+numbers
+             in the assembler listing file.</li>
+
+<li>  BIN30-5/20016 - Special operators should not accept odd offsets in
+             program memory.</li>
+
+<li>  BIN30-8/21797 - The .align directive changes section alignment 
+regardless
+             of max-skip.</li>
+
+<li>  BIN30-10/23306 - For COFF, the option -g (source debugging info)
+             does not work with any section other than .text.</li>
+
+<li>  BIN30-17/25555 - Cannot generate code for goto $-2.</li>
+
+<li>  BIN30-22/28477- Unexpected results using .equiv as value for 
+another 
+             .equiv.
+
+  <p>The following example is not encoded correctly:</p>
+  
+<pre>     .equiv var1,root+1
+     .equiv var2,var1
+     .word var1  ; encodes root+1
+     .word var2  ; encodes root
+</pre>
+     <p>This can happen when the value specified in <tt>.equiv</tt> is 
+the 
+        name of an SFR high byte such as <tt>_LATBH</tt>, which is 
+defined in 
+        the processor include files as an <tt>.equiv</tt>. The 
+workaround in
+        this case would be to refer to the base register itself, i.e. 
+        <tt>_LATB+1</tt>
+
+
+</p></li><li>  BIN30-92 - Can't set breakpoints in pre-processed 
+assembly file
+                 (COFF-only)</li>
+
+<li>  BIN30-101 - Multiple .equs to undefined symbol causes internal 
+error
+                  in the assembler
+                 
+        <p>The following assembly statements will cause a failure:</p>
+<pre>.equ foo,bar
+.equ baz,foo
+.word baz
+</pre>
+
+        <p>In this example, bar is an undefined symbol, while foo and
+            baz are indirect references to bar. The second level of
+            indirection is causing the failure. The following sequences
+            work fine:</p>
+
+<pre>.equ foo,bar
+.word foo ; one level of indirection
+
+.equ bar,9
+.equ foo,bar
+.equ baz,foo
+.word baz ; two levels of indirection to a literal constant
+</pre>
+</li>
+
+<h3><u>   Compiler </u></h3>
+
+<li>  Structures must be less than 4096 words in size. </li>
+
+<li>  Blocks of code (such as a conditional statement or loop) may
+     not exceed 32K program words. </li>
+
+<li>  Procedural Abstraction limitations: 
+
+  <p>When the procedural abstraction optimization is enabled (using
+     the -mpa command-line option) inline assembly code must be
+     limited to valid machine instructions.</p>
+
+  <p>Invalid machine instructions, instruction sequences, or assembler 
+     directives (sectioning directives, macros, include files, etc.) 
+     must not be used. Invalid use will cause procedural abstraction 
+     compilation stage to fail, inhibiting the creation of an output 
+file.
+     </p></li>
+
+<li> Data placed in <tt>space(ymemory)</tt> with the new section 
+directives or
+     through legacy <tt>section(".ybss")</tt> or <tt>section(".ydata")</tt>
+ 
+     attributes may cause a link error. 
+
+  <p>Releases prior to v1.30 did not support the notion of near 
+Y-memory. 
+     The compiler's default data memory model is <tt>-msmall-data</tt> /
+ 
+     <tt>-msmall-scalar</tt>, which places variables into near memory. 
+     Since not all dsPIC30F variants have their entire Y memory in near 
+data 
+     space, users may now need to define Y memory variables with the 
+     <tt>far</tt>attribute or compile with the <tt>-mlarge-data</tt> / 
+     <tt>-mlarge-scalar</tt> switches. </p></li>
+
+<li>  C30-11/28301 - No error for unsupported nested functions</li>
+
+<li>  C30-22/29063 - Multiple Copies of "traps.c" exist in the C30 
+folders and 
+          they do not match</li>
+
+<li>  C30-46/24356 - Subtraction from symbol address causes assembler 
+error</li>
+
+    <p>Taking the address of a symbol and subtracting a literal can 
+cause an
+       assembler error.  Fortunately this is also a C semantic error.</p>
+
+<li>  C30-59/26772 - With -g (generate debug info), compiler-generated 
+assembly
+          for noload function switches back to .text before code for 
+          function</li>
+
+<li>  C30-68/27206 - DWARF line table is missing entries for two level 
+          abstracted code.</li>
+
+<li>  C30-172 - pa tool expects only labels to start at the beginning of
+ a 
+        line (column 0)</li>
+
+<li>  C30-281 - when compiled -O2 or greater, debug information for 
+unused 
+                symbols disappear </li>
+
+<li>  C30-287 - definitions in periph library include file generic.h may
+ 
+                conflict with project macros </li>
+
+<li>  C30-398 - 24-bit pointer types are not supported in debug format
+                (COFF and ELF) </li>
+
+<li>  C30-399 - long long types are not supported in COFF debug format </li>
+
+<li>  C30-615 - Cannot use save attribute with ACCAU</li>
+
+<li>  C30-754 - EDS qualified pointers not properly represented in IDE
+
+    <p>Neither are: __prog__, __psv__, __external__, __pmp__ pointers.  
+       Manually select 32-bits for all these pointers when viewing</p>
+
+
+
+<h3><u>   Linker </u></h3>
+   
+             
+</li><li>  BIN30-23/28952 - Multiple definition error with custom linker
+ script
+
+             <p>If a linker script is modified to place the .text 
+section
+             from one object file before all the others, multiple 
+definition
+             errors can result. When this occurs the linker acts as if 
+the
+             section was included twice. The workaround is to specify a 
+full
+             pathname, or *, before the object file name:</p>
+
+<pre>             /*
+             ** User Code and Library Code
+             */
+             .text :
+             {
+                *(.init);
+                *(.user_init);
+                *(.handle);
+                *(.libc) *(.libm) *(.libdsp);  /* keep together in
+                                                  this order */
+                *(.lib*);
+                myfile.o(.text);   /* this form causes error */
+                *myfile.o(.text);  /* this form works OK */
+             } &gt;program
+</pre></li>
+
+<li>  BIN30-178 - Linker does not validate object signatures across
+                  input files.
+
+       <p>The linker will not detect a mis-match of the
+          <tt>-mlarge-arrays</tt> option among input files. As a
+          work-around, place objects into a library before adding
+          them to the project.</p></li>
+
+<li>  BIN30-179 - Linker does not support initialized data sections
+                  larger than 64K. </li>
+
+</ul>
+
+
+</span>
+<li class="Heading0"><h1><a name="EnvChanges">
+Environment Variables Modified
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<p>This installation makes no changes to the way environment variables
+have been updated previously.</p>
+
+<p>Modified environment variables are identified as part of the 
+installation procedure and are documented in the manuals.</p>
+
+
+</span>
+<li class="Heading0"><h1><a name="Support">
+Customer Support
+</a></h1></li>
+<span style="font-size: 10pt; font-weight: normal;">
+
+<br>
+        Microchip provides online support via our home page at:<br>
+        <a href="http://www.microchip.com/">http://www.microchip.com</a>
+<br> <br>
+        Technical support is available through the web site at:<br>
+        <a href="http://support.microchip.com/">http://support.microchip.com</a>
+<br> <br>
+        A forum for discussion of Microchip products and tools is
+        available at:<br>
+        <a href="http://forum.microchip.com/">http://forum.microchip.com</a>
+<br> <br>
+
+</span>
+</span></ol>
+
+</span></body></html>

@@ -1,0 +1,78 @@
+Partlist exported from //Missouri/madisonvii/Documents and Settings/Cy Drollinger/My Documents/eagle/WifiSensor/WiFiSensor.sch at 3/31/2015 2:35:44 PM
+
+Part Value           Device                Package           Description                         
+BAT1                 BATTERY245PTH         BATTCON_245MM_PTH Battery Holders                     
+C1   16pF            C-ERC0402             C0402                                                 
+C2   16pF            C-ERC0402             C0402                                                 
+C3   12pF            C-ERC0402             C0402                                                 
+C4   12pF            C-ERC0402             C0402                                                 
+C5   33uF            CPOL-USB              PANASONIC_B       POLARIZED CAPACITOR, American symbol
+C6   10uF            CPOL-USB              PANASONIC_B       POLARIZED CAPACITOR, American symbol
+C11  1UF             C-ERC0402             C0402                                                 
+C12  330pF           C-ERC0402             C0402                                                 
+C13  10pF            C-ERC0402             C0402                                                 
+C14  10UF            C-ER                  C0805                                                 
+C15  33pF            C-ERC0402             C0402                                                 
+C16  10pF            C-ERC0402             C0402                                                 
+C17  10UF            C-ER                  C0805                                                 
+C21  .1uF            C-ERC0402             C0402                                                 
+C22  .1uF            C-ERC0402             C0402                                                 
+C23  .1uf            C-ERC0402             C0402                                                 
+C24  .1UF            C-ERC0402             C0402                                                 
+C25  C-ERC0402       C-ERC0402             C0402                                                 
+C26  .1UF            C-ERC0402             C0402                                                 
+C27  10UF            C-ER                  C0805                                                 
+C28  .1uf            C-ERC0402             C0402                                                 
+CM1  10UF            C-ER                  C0805                                                 
+CM2  10uF            C-ER                  C0805                                                 
+IC1  LTC3558         LTC3558               QFN20                                                 
+IC2  PICMX32695F512H PICMX32695F512H       TQFP64                                                
+IC3  M25P16          M25P16                VDFPN8                                                
+JP1                  M06LOCK               1X06_LOCK         Header 6                            
+L11  4.7uH           L-ER                  L3010                                                 
+L12  2.2uH           L-ER                  L3010                                                 
+LED0                 1X1RGB                1X1                                                   
+LED1                 1X1RGB                1X1                                                   
+LED2                 1X1RGB                1X1                                                   
+MOD1 MRF24WG0MA/MB   MRF24WG0MA/MB         MRF24                                                 
+OSC1 32.768kHz       ECX32                 ECX39                                                 
+OSC2 8MHz            CX532                 CX532                                                 
+R1   0               R-US_R1206            R1206             RESISTOR, American symbol           
+R2   0               R-US_R1206            R1206             RESISTOR, American symbol           
+R11  1k74            R-ERR0402             R0402                                                 
+R12  105k            R-ERR0402             R0402                                                 
+R13  12k7            R-ERR0402             R0402                                                 
+R14  100k            R-ERR0402             R0402                                                 
+R15  313k            R-ERR0402             R0402                                                 
+R16  100k            R-ERR0402             R0402                                                 
+R17  313k            R-ERR0402             R0402                                                 
+R18  100k            R-ERR0402             R0402                                                 
+R19  121k            R-ERR0402             R0402                                                 
+R20  15k             R-ERR0402             R0402                                                 
+R21  10k             R-ERR0402             R0402                                                 
+R22  100             R-ERR0402             R0402                                                 
+R23  100             R-ERR0402             R0402                                                 
+R24  100             R-ERR0402             R0402                                                 
+R25  100             R-ERR0402             R0402                                                 
+R26  100             R-ERR0402             R0402                                                 
+R28  100             R-ERR0402             R0402                                                 
+R29  100             R-ERR0402             R0402                                                 
+R201 100             R-ERR0402             R0402                                                 
+R202 10k             R-ERR0402             R0402                                                 
+R203 470             R-ERR0402             R0402                                                 
+R204 10k             R-ERR0402             R0402                                                 
+R205 470             R-ERR0402             R0402                                                 
+R206 R-ERR0402       R-ERR0402             R0402                                                 
+R207 100             R-ERR0402             R0402                                                 
+R208 100             R-ERR0402             R0402                                                 
+RM1  4k7             R-ERR0402             R0402                                                 
+RM2  4k7             R-ERR0402             R0402                                                 
+RM3  4k7             R-ERR0402             R0402                                                 
+RM4  4k7             R-ERR0402             R0402                                                 
+RM5  4k7             R-ERR0402             R0402                                                 
+RM6  4k7             R-ERR0402             R0402                                                 
+RM7  4k7             R-ERR0402             R0402                                                 
+SW0                  BS3N                  BS3N                                                  
+SW1                  BS3N                  BS3N                                                  
+U$11 12_127          12_127                12-127                                                
+X1   usb             MINI-USB-UX60A-MB-5ST UX60A-MB-5ST      MINI USB Connector                  

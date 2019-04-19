@@ -1,0 +1,20 @@
+Copyright Information and Usage NoticeThis information disclosed herein is the exclusive property of Dynastream Innovations Inc.  The recipient and user of this document must be an ANT+ Adopter pursuant to the ANT+ Adopter’s Agreement and must use the information in this document according to the terms and conditions of the Adopter’s Agreement and the following:
+a)	You agree that any products or applications that you create using the ANT+ Documents and ANT+ Design Tools will comply with the minimum requirements for interoperability as defined in the ANT+ Documents and will not deviate from the standards described therein.  b)	You agree not to modify in any way the ANT+ Documents provided to you under this Agreement.c)	You agree not to distribute, transfer, or provide any part of the ANT+ Documents or ANT+ Design Tools to any person or entity other than employees of your organization with a need to know.d)	You agree to not claim any intellectual property rights or other rights in or to the ANT+ Documents, ANT+ Design Tools, or any other associated documentation and source code provided to you under this Agreement.  Dynastream retains all right, title and interest in and to the ANT+ Documents, ANT+ Design Tools, associated documentation, and source code and you are not granted any rights in or to any of the foregoing except as expressly set forth in this Agreement.h)	DYNASTREAM MAKES NO CONDITIONS, WARRANTIES OR REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, USABILITY, SECURITY, QUALITY, CAPACITY, PERFORMANCE, AVAILABILITY, TIMELINESS OR ACCURACY OF THE ANT+ DOCUMENTS, ANT+ DESIGN TOOLS OR ANY OTHER PRODUCTS OR SERVICES SUPPLIED UNDER THIS AGREEMENT OR THE NETWORKS OF THIRD PARTIES. DYNASTREAM EXPRESSLY DISCLAIMS ALL CONDITIONS, WARRANTIES AND REPRESENTATIONS, EXPRESS, IMPLIED OR STATUTORY INCLUDING, BUT NOT LIMITED TO, IMPLIED CONDITIONS OR WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, TITLE AND NON-INFRINGEMENT, WHETHER ARISING BY USAGE OF TRADE, COURSE OF DEALING, COURSE OF PERFORMANCE OR OTHERWISE.j)	You agree to indemnify and hold harmless Dynastream for claims, whether arising in tort or contract, against Dynastream, including legal fees, expenses, settlement amounts, and costs, arising out of the application, use or sale of your designs and/or products that use ANT, ANT+, ANT+ Documents, ANT+ Design Tools, or any other products or services supplied under this Agreement.If you are not an ANT+ Adopter, please visit our website at www.thisisant.com to become an ANT+ Adopter. Otherwise you must destroy this document immediately and have no right to use this document or any information included in this document. The information contained in this document is subject to change without notice and should not be construed as a commitment by Dynastream Innovations Inc. Products sold by DYNASTREAM are not designed for use in life support and/or safety equipment where malfunction of the Product can reasonably be expected to result in injury or death. Your use or sell such products for use in life support and/or safety applications at your own risk and agree to defend, indemnify and hold harmless DYNASTREAM from any and all damages, claims, suits or expense resulting from such use.
+©2011 Dynastream Innovations Inc. All Rights Reserved.
+
+
+The ANT+ network key is 8 hex values and is shown below:
+
+0xB9, 0xA5, 0x21, 0xFB, 0xBD, 0x72, 0xC3, 0x45
+
+
+The ANT-FS key is 8 hex values and is shown below:
+
+0xA8, 0xA4, 0x23, 0xB9, 0xF5, 0x5E, 0x63, 0xC1
+
+These keys are used in the ANT_SetNetworkKey() function as described in section 9.5.2.7 of the
+ANT Message Protocol and Usage document.  You will find the latest version of this document,
+and other useful information in the Developer's Zone on the ANT website at www.thisisant.com.
+
+You will find the ANT-FS Specification documents in the ANT+ Adopter Zone at www.thisisant.com 
+(login/registration required for access)

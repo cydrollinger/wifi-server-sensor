@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Lockie Wifi Freezer Temperatures</title>
+    <link href="css/mchp.css" rel="stylesheet" type="text/css" />
+    <script src="javascript/mchp.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="shadow-one"><div id="shadow-two"><div id="shadow-three"><div id="shadow-four">
+<div id="page">
+
+<div id="logo_banner" style="padding:0 0 5px 5px"><a href="http://www.elec-real.com"><img src="images/er.jpg" alt="www.elec-real.com" /></a></div>
+
+<div id="title"><div class="right">Early Warning Rising Temperatures</div><span id="hello">&nbsp;</span></div>
+
+<div id="menu">
+    <a href="/index.htm">Temperatures</a>
+	<a href="/message.htm">Configure Messages</a>
+    <a href="/configure.htm">Configure Network</a>
+</div>
+  
+<form method="get" action="message.htm" onsubmit="btn=document.getElementById('btnSubmit'); btn.value='(please wait)'; btn.disabled = true;">
+<fieldset>
+<div id="empty" style="display:none"><label>MT:</label>
+<input type="text" name="empty" value="~empty~" /></div>
+<div id="mtval" style="display:none">Current mt:~empty~</div> 
+
+<div><label>To:</label>
+<input type="text" name="to" /></div>
+<div>Current to:~Addto~</div> 
+<div><label>CC:</label>
+<input type="text" name="cc" /></div>
+<div>Current cc:~AddCC~</div>
+<div><input id="btnSubmit" type="submit" class="sm" value="Submit Addresses"/></div>
+</fieldset>
+</form>
+
+  </body>
+</html>

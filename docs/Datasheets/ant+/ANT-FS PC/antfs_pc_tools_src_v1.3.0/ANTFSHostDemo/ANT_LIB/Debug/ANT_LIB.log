@@ -1,0 +1,18 @@
+﻿Build started 10/17/2012 3:19:06 PM.
+     1>Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANT_LIB\ANT_LIB.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\ANT_LIB.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Lib:
+         All outputs are up-to-date.
+         ANT_LIB.vcxproj -> C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\Debug\ANT_LIB.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\ANT_LIB.unsuccessfulbuild".
+         Touching "Debug\ANT_LIB.lastbuildstate".
+     1>Done Building Project "C:\work\Proposals\GURU\Heavey Powder\product\ant+\ANT-FS PC\antfs_pc_tools_src_v1.3.0\ANTFSHostDemo\ANT_LIB\ANT_LIB.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.53

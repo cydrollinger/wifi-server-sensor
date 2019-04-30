@@ -4,7 +4,8 @@
 >Design: Wifi communication web server 		   
 >Engineer: Cy Drollinger								   
 >Date: 8/15												           
->Email: cy@elec-real.com								   
+>Email: cy@elec-real.com
+>Website: https://elec-real.com								   
 >Address: 2023 Stadium Dr Suite 2B #210 Bozeman, MT 59715				   
 >Phone: 406-539-8117	
 
